@@ -26,8 +26,8 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav variant="pills" className="ms-auto">
-                        <NavLink to='/home'>  <Nav.Link href='/home'>Home</Nav.Link></NavLink>
-                        <NavLink to='/explore'>  <Nav.Link href='/explore'>Explore</Nav.Link></NavLink>
+                        <NavLink to='/home' className='text-decoration-none'>  <Nav.Link href='/home'>Home</Nav.Link></NavLink>
+                        <NavLink to='/explore' className='text-decoration-none'>  <Nav.Link href='/explore'>Explore</Nav.Link></NavLink>
                         {/* {user.displayName && <NavLink to='/allOrders'><Nav.Link href='/allOrders'>All Reservations</Nav.Link></NavLink>}
                        {user.displayName && <NavLink to='/newSite'><Nav.Link href='/newSite'>Add Site</Nav.Link></NavLink>}
                        {user.displayName && <NavLink to='/myOrder'><Nav.Link href='/myOrder '>MyReservations</Nav.Link></NavLink>}

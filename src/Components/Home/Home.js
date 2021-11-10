@@ -10,6 +10,7 @@ import review from './icons8-review-58.png'
 import review1 from './icons8-review-60.png'
 import Slider from "react-slick";
 import './home.css'
+import Rating from 'react-rating';
 const Home = () => {
     const [watches] = useWatchData();
     const [reviewData] = useReviewLoad();
@@ -74,6 +75,12 @@ const Home = () => {
                                 <Card.Text className='fs-5'>
                                     {data.descript.slice(0, 90)}
                                 </Card.Text>
+                                <Rating
+                                    readonly
+                                    initialRating={data.star}
+                                    emptySymbol='far fa-star '
+                                    fullSymbol='fas fa-star text-warning'
+                                ></Rating>
                             </Card.Body>
                         </Card>
 
