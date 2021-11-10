@@ -5,6 +5,10 @@ import pic1 from './carousel-1.jpg'
 import pic2 from './icons8-owl-64.svg'
 import pic3 from './icons8-eyes-cartoon-64.svg'
 import pic4 from './icons8-owl-64_1_.svg'
+import pic5 from './vitae-london-8BOZ2TxO2lQ-unsplash.jpg'
+import pic6 from './hunters-race--SDgOlirIaY-unsplash.jpg'
+import pic7 from './HORSEBIT-LEATHER-W-MODEL_DPS-e1427482122685.jpg'
+import pic8 from './icons8-watch-64(1).png'
 const General = () => {
     return (
         <div>
@@ -14,7 +18,7 @@ const General = () => {
                 {/* top banner text */}
                 <Row>
                     <Col xs={12} md={6} className='text-bg order-md-2 order-1'><div data-aos="fade-up-right" className='text-ceter mt-5 pt-5 '>
-                        <h2 className='fs-1 fw-bold '> <img src={pic4} alt="" className='fil' /> We are Watching You !!!</h2>
+                        <h2 className='fs-1 fw-bold '> <img src={pic4} alt="" className='fil' /> We are Watching You <img src={pic8} alt="" className='' />!!!</h2>
                         <Row className='ms-3'>
                             <Col xs={12} md={6}><p className='text-start'>Bringing forward a collection with an aesthetic appeal for a broad market while ensuring exceptional results is a challenge for any organization. Riva Precision provides a systematic approach to creating timeless designs that are consistently reproduced through the company’s in-house capabilities. </p></Col>
                             <Col xs={12} md={6}><p className='text-start'>This is only the beginning of what makes Riva the right choice—the trusted choice—as a business partner. The world’s leading jewelry retailers have worked with Riva Precision for over two decades because they demand the exceptional results that only a global leader in jewelry manufacturing can provide.
@@ -36,7 +40,7 @@ const General = () => {
                             <Carousel.Item>
                                 <img
                                     className="d-block w-100 CarouselImg"
-                                    src="https://images.unsplash.com/photo-1517463700628-5103184eac47?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHdhdGNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                                    src={pic7}
                                     alt="Second slide"
                                 />
                             </Carousel.Item>
