@@ -11,9 +11,9 @@ const HomeProduct = ({ data }) => {
                 <Row xs={1} md={3} className="g-4">
                     {data.map(product => (
                         <Col key={product.Id}>
-                            <Card className="text-center c cb h-100">
+                            <Card className="text-center cards bg-card h-100">
                                 <div className="image-box">
-                                    <Card.Img variant="top" src={product.Img} className="im1" />
+                                    <Card.Img variant="top" src={product.Img} className="img1" />
                                 </div>
                                 <Card.Header>{product.Feature}</Card.Header>
                                 <Card.Body>
