@@ -6,9 +6,8 @@ import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-import Banner from './Components/Banner/Banner';
+import Home from './Components/Home/Home';
 function App() {
   useEffect(() => {
     AOS.init();
@@ -18,8 +17,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path='/'>
-            <Header></Header>
-            <Banner></Banner>
+            <Home></Home>
           </Route>
           <Route path='/'></Route>
           <Route path='/'></Route>
