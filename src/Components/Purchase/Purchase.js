@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Purchase.css'
-import { Card, Col, Container, Modal, Row } from 'react-bootstrap';
+import { Card, Col, Container, Modal, Row, Button } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import Rating from 'react-rating';
 import { useForm } from 'react-hook-form';
@@ -18,9 +18,9 @@ const Purchase = () => {
     const onSubmit = data => {
         reset('');
         console.log(data)
-        // data.site = siteData;
-        // data.orderStatus = 'Pending';
-        // axios.post('https://enigmatic-earth-69756.herokuapp.com/order', data).then(res => res.data.insertedId ? handleShow() : '')
+        data.item = ghori;
+        data.orderStatus = 'Pending';
+        axios.post('http://localhost:7000/order', data).then(res => res.data.insertedId ? handleShow() : '')
 
     }
     useEffect(() => {
@@ -84,6 +84,19 @@ const Purchase = () => {
 
 
             </Row>
+
+            {/* modal after submit form */}
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>WOOHOOOO</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Your Order has been placed</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="success" onClick={handleClose}>
+                        Thank You!
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </Container >
     );
 };
