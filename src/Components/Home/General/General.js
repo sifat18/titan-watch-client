@@ -14,7 +14,7 @@ const General = () => {
                 {/* top banner text */}
                 <Row>
                     <Col xs={12} md={6} className='text-bg order-md-2 order-1'><div data-aos="fade-up-right" className='text-ceter mt-5 pt-5 '>
-                        <h2 className='fs-1 fw-bold '> <img src={pic4} alt="" className='logo-img' /> We are Watching You !!!</h2>
+                        <h2 className='fs-1 fw-bold '> <img src={pic4} alt="" className='fil' /> We are Watching You !!!</h2>
                         <Row className='ms-3'>
                             <Col xs={12} md={6}><p className='text-start'>Bringing forward a collection with an aesthetic appeal for a broad market while ensuring exceptional results is a challenge for any organization. Riva Precision provides a systematic approach to creating timeless designs that are consistently reproduced through the company’s in-house capabilities. </p></Col>
                             <Col xs={12} md={6}><p className='text-start'>This is only the beginning of what makes Riva the right choice—the trusted choice—as a business partner. The world’s leading jewelry retailers have worked with Riva Precision for over two decades because they demand the exceptional results that only a global leader in jewelry manufacturing can provide.

@@ -8,6 +8,8 @@ import { useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
+import Nopage from './Components/Nopage/Nopage';
+import Header from './Components/Header/Header';
 function App() {
   useEffect(() => {
     AOS.init();
@@ -19,10 +21,21 @@ function App() {
           <Route exact path='/'>
             <Home></Home>
           </Route>
-          <Route path='/'></Route>
-          <Route path='/'></Route>
-          <Route path='/'></Route>
-          <Route path='/'></Route>
+          <Route path='/home'><Home /></Route>
+          {/* <Route path='/'></Route> */}
+          <Route path='/purchase'>
+            <Header />
+
+          </Route>
+          <Route path='/explore'>
+            <Header />
+
+          </Route>
+          <
+            Route path='*'>
+            <Header />
+            <Nopage></Nopage>
+          </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>

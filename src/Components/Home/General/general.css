@@ -11,6 +11,8 @@
  .CarouselImg{
     width: 100%;
     height: 600px;
-    /* max-height: 225px; */
   } 
+  .fil{
+     filter: invert(1);
+  }
   
