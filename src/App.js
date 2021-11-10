@@ -10,6 +10,8 @@ import Footer from './Components/Footer/Footer';
 import Home from './Components/Home/Home';
 import Nopage from './Components/Nopage/Nopage';
 import Header from './Components/Header/Header';
+import Explore from './Components/Explore/Explore';
+import Purchase from './Components/Purchase/Purchase';
 function App() {
   useEffect(() => {
     AOS.init();
@@ -22,14 +24,17 @@ function App() {
             <Home></Home>
           </Route>
           <Route path='/home'><Home /></Route>
-          {/* <Route path='/'></Route> */}
-          <Route path='/purchase'>
+          <Route path='/watch/:id'>
+            <Header />
+            <Purchase></Purchase>
+          </Route>
+          {/* <Route path='/'>
             <Header />
 
-          </Route>
+          </Route> */}
           <Route path='/explore'>
             <Header />
-
+            <Explore />
           </Route>
           <
             Route path='*'>

@@ -78,7 +78,7 @@ const Home = () => {
                                 <Rating
                                     readonly
                                     initialRating={data.star}
-                                    emptySymbol='far fa-star '
+                                    emptySymbol='far fa-star text-warning'
                                     fullSymbol='fas fa-star text-warning'
                                 ></Rating>
                             </Card.Body>

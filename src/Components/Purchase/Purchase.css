@@ -1,0 +1,39 @@
+.detail-pic{ 
+    height: 550px;
+    width: 100%;
+    object-fit : contain ;
+  }
+  .detail{
+      
+min-height: 100vh;
+}
+.box{
+min-height: 550px;
+    /* width: 100%; */
+}
+.bg{
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken,luminosity;
+    min-height:100vh ;
+    width: 100vw;
+    margin-left: -1.8rem;
+    
+}
+.reservation{
+    display: block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    margin: 20px auto;
+
+}
+@media (max-width:800px) {
+    .bg{
+        min-height: 256vh;
+    }
+    
+}
