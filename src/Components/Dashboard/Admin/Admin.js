@@ -14,6 +14,7 @@ const Admin = () => {
         setEmail(value)
 
     }
+    // setting the admin role in db
     const handleAddAdmin = e => {
         e.preventDefault()
         console.log(email)
@@ -27,7 +28,7 @@ const Admin = () => {
                 <input required className='adminAdd   my-4 w-25' type="email" onChange={handleOnChange} placeholder='email' name="email" id="email" />
                 <button className='adminAdd btncolr px-5 mt-4 fs-3 '>Add </button>
             </form>
-
+            {/* modal for showing confirmation */}
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Admin Added</Modal.Title>

@@ -1,3 +1,4 @@
+/* general bg */
 .general{
     background-color: rgba(0, 0, 0, 0.9);
     background-blend-mode: darken,luminosity;
@@ -8,10 +9,12 @@
     background-attachment: fixed;
 
  }
+ /* carousel bg */
  .CarouselImg{
     width: 100%;
     height: 600px;
   } 
+  /* svg img invert */
   .fil{
      filter: invert(1);
   }

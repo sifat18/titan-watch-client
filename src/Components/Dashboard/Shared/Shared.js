@@ -5,7 +5,7 @@ import './share.css'
 const Shared = () => {
     const [watches] = useWatchData()
     return (
-
+        // display for all users 
         <Container data-aos="zoom-in-down" className="shared mt-1">
             <Row className="g-3 ">
                 <Col xs={12} md={6} >

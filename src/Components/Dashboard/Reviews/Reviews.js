@@ -13,7 +13,7 @@ const Reviews = () => {
     const handleShow = () => setShow(true);
     const { user } = useAuth()
 
-
+    // sending review data to db
     const onSubmit = data => {
         reset('');
         console.log(data)
@@ -22,6 +22,7 @@ const Reviews = () => {
     }
 
     return (
+        // review data form
         <Container data-aos="zoom-in-up">
             <h2 className='text-center'>Give Us a review</h2>
             <form className='mt-3 mx-auto pt-2 w-50' onSubmit={handleSubmit(onSubmit)}>

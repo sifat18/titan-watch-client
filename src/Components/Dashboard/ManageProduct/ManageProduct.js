@@ -10,15 +10,17 @@ const ManageProduct = () => {
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
+    //    fetching all watch data from db
     useEffect(() => {
         fetch(`https://vast-everglades-95998.herokuapp.com/watch`).then(res => res.json()).then(data => setproductData(data))
     }, [modifiid])
-
+    // display on delete
     const getmodal = (id) => {
         setid(id)
         handleShow()
 
     }
+    // removing any product from db
     const handleremove = (id) => {
         axios.delete(`https://vast-everglades-95998.herokuapp.com/watch/${id}`).then(res => {
             if (res.data) {
@@ -30,6 +32,7 @@ const ManageProduct = () => {
         handleClose()
     }
     return (
+        // data display in table
         <Container data-aos="flip-right" fluid className='pt-3   text-center allorderbg'>
             <Table responsive striped bordered hover >
                 <thead>

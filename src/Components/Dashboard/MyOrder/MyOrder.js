@@ -17,10 +17,12 @@ const MyOrder = () => {
         handleShow()
 
     }
+    // data filtering by email from db data
     useEffect(() => {
         fetch(`https://vast-everglades-95998.herokuapp.com/order/${user.email}`).then(res => res.json()).then(data => setproductData(data))
     }, [modifiid])
 
+    // order remove
     const handleremove = (id) => {
         axios.delete(`https://vast-everglades-95998.herokuapp.com/order/${id}`).then(res => {
             if (res.data) {

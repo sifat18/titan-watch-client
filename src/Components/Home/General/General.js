@@ -13,9 +13,7 @@ const General = () => {
     return (
         <div>
             <Container fluid className='general'>
-                {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffff" fill-opacity="1" d="M0,224L48,186.7C96,149,192,75,288,85.3C384,96,480,192,576,218.7C672,245,768,203,864,160C960,117,1056,75,1152,58.7C1248,43,1344,53,1392,58.7L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> */}
-                {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffff" fill-opacity="1" d="M0,96L48,133.3C96,171,192,245,288,261.3C384,277,480,235,576,197.3C672,160,768,128,864,128C960,128,1056,160,1152,154.7C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> */}
-                {/* top banner text */}
+                {/* carousel and text section */}
                 <Row>
                     <Col xs={12} md={6} className='text-bg order-md-2 order-1'><div data-aos="fade-up-right" className='text-ceter mt-5 pt-5 '>
                         <h2 className='fs-1 fw-bold '> <img src={pic4} alt="" className='fil' /> We are Watching You <img src={pic8} alt="" className='' />!!!</h2>

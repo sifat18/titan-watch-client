@@ -19,18 +19,19 @@ const Allorder = () => {
     useEffect(() => {
         fetch(`https://vast-everglades-95998.herokuapp.com/order`).then(res => res.json()).then(data => setorderData(data))
     }, [modifiid])
-
+    // model display function on update
     const getmodal = (id) => {
         setid(id)
         handleShow()
 
     }
+    // model display function on delete
     const deleteModal = (id) => {
         setid(id)
         handleShow2()
 
     }
-
+    // removing order from db
     const handleremove = (id) => {
         axios.delete(`https://vast-everglades-95998.herokuapp.com/order/${id}`).then(res => {
             if (res.data) {
@@ -41,6 +42,7 @@ const Allorder = () => {
         })
         handleClose2()
     }
+    // updating status order in db
     const handleUpdate = (id) => {
         axios.put(`https://vast-everglades-95998.herokuapp.com/orderUpdate/${id}`).then(res => {
             if (res.data.modifiedCount) {
@@ -52,6 +54,7 @@ const Allorder = () => {
     }
 
     return (
+        // all order display section
         <Container data-aos="fade-up-left" fluid className='pt-3   text-center allorderbg'>
             <Table responsive striped bordered hover >
                 <thead>

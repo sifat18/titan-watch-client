@@ -13,28 +13,19 @@
 .green{
   color: #64e764;
 }
-/* .sw{
-  width: 250px;
-  height: 100vh;
-} */
+
 a{
   text-decoration: none;
   border: none;
 }
+/* whole dashboard content */
 #wrapper {
   overflow-x: hidden;
   margin-left: -11px;
-  /* background-image: linear-gradient(
-    to right,
-    #baf3d7,
-    #c2f5de,
-    #cbf7e4,
-    #d4f8ea,
-    #ddfaef
-  ); */
-  overflow: hidden;
+   overflow: hidden;
   
 }
+/* side drawer */
 #sidebar-wrapper {
   min-height: 100vh;
   width: 250px;
@@ -52,11 +43,13 @@ a{
   overflow: hidden;
 
 }
+/* data displaying section */
 #page-content-wrapper {
   width: 100vw;
   overflow: hidden;
 
 }
+/* side drawer control */
 #wrapper.toggled #sidebar-wrapper {
   margin-left: 0;
 }  
@@ -67,6 +60,7 @@ a{
 .point {
   cursor: pointer;
 }
+/* display based on screen */
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;

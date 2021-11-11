@@ -7,7 +7,7 @@ const AddProduct = () => {
     const [product, setproduct] = useState({});
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    // function for setting  values on change
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -17,6 +17,7 @@ const AddProduct = () => {
         // console.log(loginData)
 
     }
+    // sending products to db
     const handleAddProduct = e => {
         e.preventDefault()
         console.log(product)
@@ -24,6 +25,7 @@ const AddProduct = () => {
 
     }
     return (
+        // product data form 
         <Container data-aos="fade-down-left">
             <h2 className='text-center'>Add Watch</h2>
             <form className='mt-3 pt-2' onSubmit={handleAddProduct}>

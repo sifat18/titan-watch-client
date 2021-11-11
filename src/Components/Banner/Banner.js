@@ -7,6 +7,7 @@ import pic6 from './images.svg'
 import pic8 from './logo-wing-computer-icons-png-favpng-bV9ajMEgZfpXjtYTWtZda8LQx.svg'
 const Banner = () => {
     return (
+        // first part of the application
         <Container fluid className=' banner-body'>
             <Container data-aos="fade-left" className='d-flex flex-column justify-content-center align-items-center  mt-5 pt-2'>
                 <img data-aos="fade-left" src={pic6} alt="Logo" className="logo-img img-fluid" height='250' width='250' />                {/* <img src={pic6} alt="" className='bg-dark' /> */}
@@ -14,17 +15,7 @@ const Banner = () => {
                 <p data-aos="fade-up" className='text-white fs-4 text-uppercase'>We craft for your class</p>
                 <p data-aos="fade-down" className='text-white fs-4 text-uppercase'>Time is what you make of it.Fashion that ticks.You have a second home, why not a second watch?</p>
             </Container>
-            {/* <img className='img-fluid my-4' src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHdhdGNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="" /> */}
 
-            {/* <Row >
-                <Col xs={12} md={6} >
-                    <h2 className='text-bg'>what's ticking?</h2>
-                    <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quam, ipsa laborum, dolorum ducimus temporibus vitae mollitia, eos inventore veritatis reiciendis? Ad et qui nihil repellendus sit molestiae perferendis quod?</p>
-                </Col>
-                <Col xs={12} md={6}>
-                    <img className='img-fluid my-4' height='300' width='300' src="https://images.unsplash.com/photo-1622434641406-a158123450f9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHdhdGNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="" />
-                </Col>
-            </Row> */}
             <svg className='wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#050505" fill-opacity="1" d="M0,224L48,234.7C96,245,192,267,288,245.3C384,224,480,160,576,128C672,96,768,96,864,117.3C960,139,1056,181,1152,170.7C1248,160,1344,96,1392,64L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
             {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff " fill-opacity="1" d="M0,64L48,58.7C96,53,192,43,288,85.3C384,128,480,224,576,240C672,256,768,192,864,154.7C960,117,1056,107,1152,133.3C1248,160,1344,224,1392,256L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> */}
             {/* <svg className='wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="5" d="M0,128L34.3,122.7C68.6,117,137,107,206,128C274.3,149,343,203,411,202.7C480,203,549,149,617,112C685.7,75,754,53,823,74.7C891.4,96,960,160,1029,202.7C1097.1,245,1166,267,1234,240C1302.9,213,1371,139,1406,101.3L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg> */}

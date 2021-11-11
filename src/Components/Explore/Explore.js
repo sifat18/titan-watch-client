@@ -9,6 +9,7 @@ import { NavLink } from 'react-router-dom';
 const Explore = () => {
     const [watches] = useWatchData();
     return (
+        // data display in cards
         <Container data-aos="zoom-out" fluid className=' explore-body py-5'>
             <h2 className='text-bg text-center'>Collections<img src={pic1} alt="" className='' /></h2>
             <hr className='mx-auto w-25 bg-white' />

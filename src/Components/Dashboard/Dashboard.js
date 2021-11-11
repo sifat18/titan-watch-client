@@ -45,13 +45,13 @@ const Dashboard = () => {
                     <ListGroup variant="flush" >
                         <Link to='/home' ><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Home</ListGroup.Item></Link>
                         <Link to={`${url}`}><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Main Dash</ListGroup.Item></Link>
-                        {/* user */}
+                        {/* user routes*/}
                         {!admin && <div>
                             <Link to={`${url}/pay`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Pay</ListGroup.Item></Link>
                             <Link to={`${url}/myOrder`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>My Order</ListGroup.Item></Link>
                             <Link to={`${url}/review`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Review</ListGroup.Item></Link>
                         </div>}
-                        {/* admin */}
+                        {/* admin routes*/}
                         {admin && <div>
 
                             <Link to={`${url}/makeAdmin`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Add Admin</ListGroup.Item></Link>
@@ -73,6 +73,7 @@ const Dashboard = () => {
 
                 </div>
                 <Col >
+                    {/* nested routes */}
                     <Shared />
                     <Switch>
                         <Route exact path={path}>

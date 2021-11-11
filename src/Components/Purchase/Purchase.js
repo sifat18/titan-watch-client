@@ -15,7 +15,7 @@ const Purchase = () => {
     const { user } = useAuth();
     const { id } = useParams();
 
-
+    // sending order data to db
     const onSubmit = data => {
         reset('');
         console.log(data)
@@ -24,6 +24,7 @@ const Purchase = () => {
         axios.post('https://vast-everglades-95998.herokuapp.com/order', data).then(res => res.data.insertedId ? handleShow() : '')
 
     }
+    // single data load based on id
     useEffect(() => {
         fetch(`https://vast-everglades-95998.herokuapp.com/watch/${id}`).then(res => res.json()).then(data => setghori(data))
     }, [id])

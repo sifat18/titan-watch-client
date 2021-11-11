@@ -1,3 +1,4 @@
+/* collections bg */
 .homeProd{
     background-color: rgba(0, 0, 0, 0.9);
     background-blend-mode: darken,luminosity;
@@ -9,7 +10,7 @@
 min-height: 100vh;
 overflow: hidden;
  }
-
+/* card styles */
  .cards{
     border-radius: 1rem;
     border: 1px solid transparent;
@@ -24,7 +25,7 @@ overflow: hidden;
 .bg-card{
     background-color: rgba(225, 225, 225, 0.1);
 }
-
+/* img style card */
 .img1{
     -webkit-transition:all .9s ease; 
     -moz-transition:all .9s ease; 
