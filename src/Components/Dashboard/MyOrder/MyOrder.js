@@ -18,11 +18,11 @@ const MyOrder = () => {
 
     }
     useEffect(() => {
-        fetch(`http://localhost:7000/order/${user.email}`).then(res => res.json()).then(data => setproductData(data))
+        fetch(`https://vast-everglades-95998.herokuapp.com/order/${user.email}`).then(res => res.json()).then(data => setproductData(data))
     }, [modifiid])
 
     const handleremove = (id) => {
-        axios.delete(`http://localhost:7000/order/${id}`).then(res => {
+        axios.delete(`https://vast-everglades-95998.herokuapp.com/order/${id}`).then(res => {
             if (res.data) {
                 const collect = productData.filter(product => product._id !== id)
                 setproductData(collect);

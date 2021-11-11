@@ -97,7 +97,7 @@ const useFirebase = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:7000/user/${user.email}`)
+        fetch(`https://vast-everglades-95998.herokuapp.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -116,7 +116,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const userData = { email, displayName };
-        fetch('http://localhost:7000/user', {
+        fetch('https://vast-everglades-95998.herokuapp.com/user', {
             method: method,
             headers: {
                 'content-type': 'application/json'

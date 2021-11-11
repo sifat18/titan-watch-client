@@ -21,11 +21,11 @@ const Purchase = () => {
         console.log(data)
         data.item = ghori;
         data.orderStatus = 'Pending';
-        axios.post('http://localhost:7000/order', data).then(res => res.data.insertedId ? handleShow() : '')
+        axios.post('https://vast-everglades-95998.herokuapp.com/order', data).then(res => res.data.insertedId ? handleShow() : '')
 
     }
     useEffect(() => {
-        fetch(`http://localhost:7000/watch/${id}`).then(res => res.json()).then(data => setghori(data))
+        fetch(`https://vast-everglades-95998.herokuapp.com/watch/${id}`).then(res => res.json()).then(data => setghori(data))
     }, [id])
 
 

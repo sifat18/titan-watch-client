@@ -20,7 +20,7 @@ const AddProduct = () => {
     const handleAddProduct = e => {
         e.preventDefault()
         console.log(product)
-        axios.post(`http://localhost:7000/watch`, product).then(res => res.data ? handleShow() : '')
+        axios.post(`https://vast-everglades-95998.herokuapp.com/watch`, product).then(res => res.data ? handleShow() : '')
 
     }
     return (

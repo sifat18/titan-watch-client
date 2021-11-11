@@ -17,7 +17,7 @@ const Admin = () => {
     const handleAddAdmin = e => {
         e.preventDefault()
         console.log(email)
-        axios.put(`http://localhost:7000/admin/${email}`).then(res => res.data.modifiedCount ? handleShow() : '')
+        axios.put(`https://vast-everglades-95998.herokuapp.com/admin/${email}`).then(res => res.data.modifiedCount ? handleShow() : '')
 
     }
     return (

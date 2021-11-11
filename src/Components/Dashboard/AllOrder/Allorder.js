@@ -17,7 +17,7 @@ const Allorder = () => {
     const handleClose2 = () => setShow2(false);
     let count = 0;
     useEffect(() => {
-        fetch(`http://localhost:7000/order`).then(res => res.json()).then(data => setorderData(data))
+        fetch(`https://vast-everglades-95998.herokuapp.com/order`).then(res => res.json()).then(data => setorderData(data))
     }, [modifiid])
 
     const getmodal = (id) => {
@@ -32,7 +32,7 @@ const Allorder = () => {
     }
 
     const handleremove = (id) => {
-        axios.delete(`http://localhost:7000/order/${id}`).then(res => {
+        axios.delete(`https://vast-everglades-95998.herokuapp.com/order/${id}`).then(res => {
             if (res.data) {
                 const collect = orderData.filter(order => order._id !== id)
                 setorderData(collect);
@@ -42,7 +42,7 @@ const Allorder = () => {
         handleClose2()
     }
     const handleUpdate = (id) => {
-        axios.put(`http://localhost:7000/orderUpdate/${id}`).then(res => {
+        axios.put(`https://vast-everglades-95998.herokuapp.com/orderUpdate/${id}`).then(res => {
             if (res.data.modifiedCount) {
                 setmodifiid(true)
             }

@@ -11,7 +11,7 @@ const ManageProduct = () => {
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);
     useEffect(() => {
-        fetch(`http://localhost:7000/watch`).then(res => res.json()).then(data => setproductData(data))
+        fetch(`https://vast-everglades-95998.herokuapp.com/watch`).then(res => res.json()).then(data => setproductData(data))
     }, [modifiid])
 
     const getmodal = (id) => {
@@ -20,7 +20,7 @@ const ManageProduct = () => {
 
     }
     const handleremove = (id) => {
-        axios.delete(`http://localhost:7000/watch/${id}`).then(res => {
+        axios.delete(`https://vast-everglades-95998.herokuapp.com/watch/${id}`).then(res => {
             if (res.data) {
                 const collect = productData.filter(product => product._id !== id)
                 setproductData(collect);

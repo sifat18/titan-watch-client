@@ -17,7 +17,7 @@ const Reviews = () => {
     const onSubmit = data => {
         reset('');
         console.log(data)
-        axios.post('http://localhost:7000/reviews', data).then(res => res.data.insertedId ? handleShow() : '')
+        axios.post('https://vast-everglades-95998.herokuapp.com/reviews', data).then(res => res.data.insertedId ? handleShow() : '')
 
     }
 
