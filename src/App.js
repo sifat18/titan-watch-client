@@ -12,39 +12,46 @@ import Nopage from './Components/Nopage/Nopage';
 import Header from './Components/Header/Header';
 import Explore from './Components/Explore/Explore';
 import Purchase from './Components/Purchase/Purchase';
+import Register from './Components/Register/Register';
+import Authprovider from './Components/AuthProvider/Authprovider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Login from './Components/Login/Login';
 function App() {
   useEffect(() => {
     AOS.init();
   }, [])
   return (
-    <div className="App">
+    <Authprovider className="App">
       <BrowserRouter>
         <Switch>
           <Route exact path='/'>
             <Home></Home>
           </Route>
           <Route path='/home'><Home /></Route>
-          <Route path='/watch/:id'>
+          <PrivateRoute path='/watch/:id'>
             <Header />
             <Purchase></Purchase>
-          </Route>
-          {/* <Route path='/'>
+          </PrivateRoute>
+          <Route path='/register'>
             <Header />
-
-          </Route> */}
+            <Register />
+          </Route>
+          <Route path='/login'>
+            <Header />
+            <Login />
+          </Route>
           <Route path='/explore'>
             <Header />
             <Explore />
           </Route>
-          <
-            Route path='*'>
+          <Route path='*'>
             <Header />
             <Nopage></Nopage>
           </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>
-    </div>
+    </Authprovider>
   );
 }
 

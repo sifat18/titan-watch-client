@@ -61,7 +61,7 @@ const Home = () => {
             <General></General>
             <HomeProduct data={homeData}></HomeProduct>
             <Container fluid className='homeProd pt-5 '>
-                <h2 className='text-bg'><img src={review1} alt="" className='' />Reviews<img src={review} alt="" className='' /></h2>
+                <h2 className='text-bg text-center'><img src={review1} alt="" className='' />Reviews<img src={review} alt="" className='' /></h2>
                 <hr className='mx-auto w-25 bg-white' />
                 <Slider {...settings} >
                     {reviewData.map(data => (
@@ -71,7 +71,7 @@ const Home = () => {
                                 <Card.Img variant="top" src={data.img} className='img-fluid img1 px-5' />
                             </div>
                             <Card.Body className='reviw mt-5 pt-5 h-50'>
-                                <Card.Title className='text-left fw-bold'>{data.name}</Card.Title>
+                                <Card.Title className='text-center fw-bold '>{data.name}</Card.Title>
                                 <Card.Text className='fs-5'>
                                     {data.descript.slice(0, 90)}
                                 </Card.Text>

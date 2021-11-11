@@ -10,7 +10,7 @@ const Explore = () => {
     const [watches] = useWatchData();
     return (
         <Container fluid className=' explore-body py-5'>
-            <h2 className='text-bg'>Collections<img src={pic1} alt="" className='' /></h2>
+            <h2 className='text-bg text-center'>Collections<img src={pic1} alt="" className='' /></h2>
             <hr className='mx-auto w-25 bg-white' />
             <Container>
                 <Row xs={1} md={3} className="g-4">

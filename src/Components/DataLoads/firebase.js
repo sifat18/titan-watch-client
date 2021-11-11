@@ -13,15 +13,17 @@ const useFirebase = () => {
 
     const provider = new GoogleAuthProvider();
     // create user
-    const createUser = (name, email, password) => {
+    const createUser = (name, email, password, history) => {
         setisLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
-                seterror('')
-                setuser(userCredential.user);
+                seterror('');
+                const newUser = { email, displayName: name };
+                setuser(newUser);
+                saveUser(email, name, 'POST');
                 setName(name)
-                window.location.reload()
+                history.replace('/');
                 // ...
             })
             .catch((error) => {
@@ -102,13 +104,13 @@ const useFirebase = () => {
     }
 
     const saveUser = (email, displayName, method) => {
-        const user = { email, displayName };
-        fetch('', {
+        const userData = { email, displayName };
+        fetch('http://localhost:7000/user', {
             method: method,
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(userData)
         })
             .then()
     }
@@ -120,7 +122,8 @@ const useFirebase = () => {
         emailPass,
         error,
         logOut,
-        signGoogle
+        signGoogle,
+        seterror
     }
 
 }
