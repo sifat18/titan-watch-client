@@ -1,0 +1,9 @@
+.shared{
+    margin-top: -15rem;
+}
+
+@media (max-width:900px) {
+    .shared{
+        margin-top: 0rem;
+    }
+}

@@ -28,7 +28,8 @@ const Header = () => {
                     <Nav variant="pills" className="ms-auto">
                         <NavLink to='/home' className='text-decoration-none'>  <Nav.Link href='/home'>Home</Nav.Link></NavLink>
                         <NavLink to='/explore' className='text-decoration-none'>  <Nav.Link href='/explore'>Explore</Nav.Link></NavLink>
-                        {/* <NavLink to='/dashboard' className='text-decoration-none'>  <Nav.Link href='/dashboard'>Register</Nav.Link></NavLink> */}
+                        {user.displayName && <NavLink to='/dashboard' className='text-decoration-none'>  <Nav.Link href='/dashboard'>Dashboard</Nav.Link></NavLink>
+                        }
                         {user.displayName && <Navbar.Text>
                             Signed in as: <a href="#login">{user.displayName}</a>
                         </Navbar.Text>}
