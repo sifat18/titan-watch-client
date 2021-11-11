@@ -30,7 +30,7 @@ const ManageProduct = () => {
         handleClose()
     }
     return (
-        <Container fluid className='pt-3   text-center allorderbg'>
+        <Container data-aos="flip-right" fluid className='pt-3   text-center allorderbg'>
             <Table responsive striped bordered hover >
                 <thead>
                     <tr className='text-center'>

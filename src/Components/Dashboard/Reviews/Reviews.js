@@ -22,7 +22,7 @@ const Reviews = () => {
     }
 
     return (
-        <Container>
+        <Container data-aos="zoom-in-up">
             <h2 className='text-center'>Give Us a review</h2>
             <form className='mt-3 mx-auto pt-2 w-50' onSubmit={handleSubmit(onSubmit)}>
                 <input required placeholder='name' defaultValue={user.displayName} className='reservation w-100' {...register("name")} />

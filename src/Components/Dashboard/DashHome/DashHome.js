@@ -2,7 +2,7 @@ import React from 'react';
 
 const DashHome = () => {
     return (
-        <div>
+        <div data-aos="fade-down-right">
             <h2 className='text-center'>DashHome</h2>
         </div>
     );

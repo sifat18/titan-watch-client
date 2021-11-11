@@ -35,7 +35,7 @@ const Purchase = () => {
             background: `url("${ghori?.Img}") no-repeat center center/cover`,
         }} className='detail' >
             <div className='bg'></div>
-            <Row xs={1} md={3} className="g-4 py-5">
+            <Row data-aos="fade-up-left" xs={1} md={3} className="g-4 py-5">
 
                 <Col>
                     <Card className='cards bg-card box'>

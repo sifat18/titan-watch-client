@@ -8,10 +8,11 @@ import pic8 from './logo-wing-computer-icons-png-favpng-bV9ajMEgZfpXjtYTWtZda8LQ
 const Banner = () => {
     return (
         <Container fluid className=' banner-body'>
-            <Container className='d-flex flex-column justify-content-center align-items-center  mt-5 pt-2'>
-                <img src={pic6} alt="Logo" className="logo-img img-fluid" height='250' width='250' />                {/* <img src={pic6} alt="" className='bg-dark' /> */}
-                <h2 className='text-bg'>what's ticking?</h2>
-                <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit.Dolore quam, ipsa laborum, dolorum ducimus temporibus vitae mollitia, eos inventore veritatis reiciendis?Ad et qui nihil repellendus sit molestiae perferendis quod?</p>
+            <Container data-aos="fade-left" className='d-flex flex-column justify-content-center align-items-center  mt-5 pt-2'>
+                <img data-aos="fade-left" src={pic6} alt="Logo" className="logo-img img-fluid" height='250' width='250' />                {/* <img src={pic6} alt="" className='bg-dark' /> */}
+                <h2 data-aos="fade-right" className='text-bg'>what's ticking?</h2>
+                <p data-aos="fade-up" className='text-white fs-4 text-uppercase'>We craft for your class</p>
+                <p data-aos="fade-down" className='text-white fs-4 text-uppercase'>Time is what you make of it.Fashion that ticks.You have a second home, why not a second watch?</p>
             </Container>
             {/* <img className='img-fluid my-4' src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fHdhdGNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="" /> */}
 

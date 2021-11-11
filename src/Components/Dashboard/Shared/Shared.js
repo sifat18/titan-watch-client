@@ -6,7 +6,7 @@ const Shared = () => {
     const [watches] = useWatchData()
     return (
 
-        <Container className="shared mt-1">
+        <Container data-aos="zoom-in-down" className="shared mt-1">
             <Row className="g-3 ">
                 <Col xs={12} md={6} >
                     <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">

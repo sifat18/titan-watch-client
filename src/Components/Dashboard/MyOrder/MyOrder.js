@@ -33,7 +33,7 @@ const MyOrder = () => {
     }
 
     return (
-        <Container fluid className='pt-3   text-center allorderbg'>
+        <Container data-aos="zoom-in" fluid className='pt-3   text-center allorderbg'>
 
             <h2 className='text-white fs-3 fw-bold text-center mb-3'> My Orders</h2>
             {!productData.length && <p className='green fs-3 fw-bold text-center mb-3'> You don't have any pending orders yet!!</p>}

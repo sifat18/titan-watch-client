@@ -24,7 +24,7 @@ const AddProduct = () => {
 
     }
     return (
-        <Container>
+        <Container data-aos="fade-down-left">
             <h2 className='text-center'>Add Watch</h2>
             <form className='mt-3 pt-2' onSubmit={handleAddProduct}>
                 <input required className='inputs my-4 w-50' type="text" onChange={handleOnChange} placeholder='Price' name="Price" id="Price" />

@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 const Pay = () => {
     return (
         <Container>
-            <h2 className='text-center'>Payment System comming soon</h2>
+            <h2 data-aos="zoom-in" className='text-center'>Payment System comming soon</h2>
         </Container>
     );
 };

@@ -60,7 +60,7 @@ const Home = () => {
             <Banner></Banner>
             <General></General>
             <HomeProduct data={homeData}></HomeProduct>
-            <Container fluid className='homeProd pt-5 '>
+            <Container data-aos="fade-up-right" fluid className='homeProd pt-5 '>
                 <h2 className='text-bg text-center'><img src={review1} alt="" className='' />Reviews<img src={review} alt="" className='' /></h2>
                 <hr className='mx-auto w-25 bg-white' />
                 <Slider {...settings} >

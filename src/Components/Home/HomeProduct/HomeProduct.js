@@ -6,7 +6,7 @@ import pic1 from './icons8-watch-64.png'
 import pic2 from './icons8-return-purchase-64.png'
 const HomeProduct = ({ data }) => {
     return (
-        <Container fluid className='homeProd pt-5 '>
+        <Container data-aos="fade-left" fluid className='homeProd pt-5 '>
             <h2 className='text-bg text-center'>Collections<img src={pic1} alt="" className='' /></h2>
             <hr className='mx-auto w-25 bg-white' />
             <Container>
