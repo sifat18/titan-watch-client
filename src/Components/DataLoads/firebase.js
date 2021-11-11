@@ -58,14 +58,15 @@ const useFirebase = () => {
     }
 
     // pass sign in
-    const emailPass = (email, password) => {
+    const emailPass = (email, password, location, history) => {
         setisLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
                 seterror('')
-
                 setuser(userCredential.user);
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
                 // ...
             })
             .catch((error) => {
