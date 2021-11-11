@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Container, Modal, Table, Button } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import ShowDelete from '../DeleteShow/ShowDelete';
 import ShowUpdate from '../ShowModal/ShowUpdate';
 const Allorder = () => {

@@ -15,6 +15,7 @@ import Admin from './Admin/Admin';
 import useAuth from '../Context/useAuth';
 import AddProduct from './AddProduct/AddProduct';
 import Allorder from './AllOrder/Allorder';
+import ManageProduct from './ManageProduct/ManageProduct';
 
 
 const Dashboard = () => {
@@ -38,6 +39,7 @@ const Dashboard = () => {
                         <i class="fas fa-user-secret"></i>{user.displayName}
                     </div>
                     <ListGroup variant="flush" >
+                        <Link to='/home' ><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Home</ListGroup.Item></Link>
                         <Link to={`${url}`}><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Main Dash</ListGroup.Item></Link>
                         <Link to={`${url}/makeAdmin`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Add Admin</ListGroup.Item></Link>
                         <Link to={`${url}/addProduct`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Add Product</ListGroup.Item></Link>
@@ -67,9 +69,9 @@ const Dashboard = () => {
                         <Route path={`${path}/makeAdmin`}>
                             <Admin />
                         </Route>
-                        <Route path={`${path}/manageAllOrder`}>
+                        <Route path={`${path}/manageAllOrder`}><Allorder />
                         </Route>
-                        <Route path={`${path}/manageProducts`}><Allorder />
+                        <Route path={`${path}/manageProducts`}><ManageProduct />
                         </Route>
                         <Route path={`${path}/addProduct`}>
                             <AddProduct />
