@@ -13,6 +13,8 @@ import Shared from './Shared/Shared';
 import DashHome from './DashHome/DashHome';
 import Admin from './Admin/Admin';
 import useAuth from '../Context/useAuth';
+import AddProduct from './AddProduct/AddProduct';
+import Allorder from './AllOrder/Allorder';
 
 
 const Dashboard = () => {
@@ -67,9 +69,10 @@ const Dashboard = () => {
                         </Route>
                         <Route path={`${path}/manageAllOrder`}>
                         </Route>
-                        <Route path={`${path}/manageProducts`}>
+                        <Route path={`${path}/manageProducts`}><Allorder />
                         </Route>
                         <Route path={`${path}/addProduct`}>
+                            <AddProduct />
                         </Route>
                     </Switch>
 

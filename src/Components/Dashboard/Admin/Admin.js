@@ -18,20 +18,7 @@ const Admin = () => {
         e.preventDefault()
         console.log(email)
         axios.put(`http://localhost:7000/admin/${email}`).then(res => res.data.modifiedCount ? handleShow() : '')
-        // fetch('', {
-        //     method: 'PUT',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(email)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         if (data.modifiedCount) {
-        //             console.log(data);
-        //             setSuccess(true);
-        //         }
-        //     })
+
     }
     return (
         <Container>
