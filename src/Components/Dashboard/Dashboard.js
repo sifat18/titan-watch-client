@@ -16,11 +16,15 @@ import useAuth from '../Context/useAuth';
 import AddProduct from './AddProduct/AddProduct';
 import Allorder from './AllOrder/Allorder';
 import ManageProduct from './ManageProduct/ManageProduct';
+import Pay from './Pay/Pay';
+import MyOrder from './MyOrder/MyOrder';
+import Reviews from './Reviews/Reviews';
+import AdminRoute from './AdminRoute/AdminRoute';
 
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
-    const { user, logOut } = useAuth()
+    const { user, logOut, admin } = useAuth()
 
     const togle = () => {
         let el = document.getElementById("wrapper");
@@ -41,10 +45,20 @@ const Dashboard = () => {
                     <ListGroup variant="flush" >
                         <Link to='/home' ><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Home</ListGroup.Item></Link>
                         <Link to={`${url}`}><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Main Dash</ListGroup.Item></Link>
-                        <Link to={`${url}/makeAdmin`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Add Admin</ListGroup.Item></Link>
-                        <Link to={`${url}/addProduct`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Add Product</ListGroup.Item></Link>
-                        <Link to={`${url}/manageAllOrder`}><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Manage AllOrders</ListGroup.Item></Link>
-                        <Link to={`${url}/manageProducts`}><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Manage Product</ListGroup.Item></Link>
+                        {/* user */}
+                        {!admin && <div>
+                            <Link to={`${url}/pay`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Pay</ListGroup.Item></Link>
+                            <Link to={`${url}/myOrder`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>My Order</ListGroup.Item></Link>
+                            <Link to={`${url}/review`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Review</ListGroup.Item></Link>
+                        </div>}
+                        {/* admin */}
+                        {admin && <div>
+
+                            <Link to={`${url}/makeAdmin`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Add Admin</ListGroup.Item></Link>
+                            <Link to={`${url}/addProduct`}><ListGroup.Item className=' border-end-0 border-top-0 border-start-0'>Add Product</ListGroup.Item></Link>
+                            <Link to={`${url}/manageAllOrder`}><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Manage AllOrders</ListGroup.Item></Link>
+                            <Link to={`${url}/manageProducts`}><ListGroup.Item className='border-end-0 border-top-0 border-start-0'>Manage Product</ListGroup.Item></Link>
+                        </div>}
                         <ListGroup.Item onClick={logOut} className='point '>LogOut</ListGroup.Item>
                     </ListGroup>
                 </Container>
@@ -55,7 +69,7 @@ const Dashboard = () => {
 
                     <i onClick={togle} className="fas fa-align-left green pt-2 fs-4 ms-5" id="menu-toggle"></i>
                     <h2 className=" fs-2 m-0 green">Dashboard</h2>
-                    <span onclick={logOut} className='ms-auto me-3 fs-3  point green '>LogOut</span>
+                    <span onClick={logOut} className='ms-auto me-3 fs-3  point green '>LogOut</span>
 
                 </div>
                 <Col >
@@ -66,15 +80,22 @@ const Dashboard = () => {
                             {/* <h3>Please select a topic.</h3> */}
                             <DashHome></DashHome>
                         </Route>
-                        <Route path={`${path}/makeAdmin`}>
+                        <AdminRoute path={`${path}/makeAdmin`}>
                             <Admin />
-                        </Route>
-                        <Route path={`${path}/manageAllOrder`}><Allorder />
-                        </Route>
-                        <Route path={`${path}/manageProducts`}><ManageProduct />
-                        </Route>
-                        <Route path={`${path}/addProduct`}>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manageAllOrder`}><Allorder />
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manageProducts`}><ManageProduct />
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/addProduct`}>
                             <AddProduct />
+                        </AdminRoute>
+                        <Route path={`${path}/pay`}>
+                            <Pay />
+                        </Route>
+                        <Route path={`${path}/myOrder`}><MyOrder />
+                        </Route>
+                        <Route path={`${path}/review`}><Reviews />
                         </Route>
                     </Switch>
 

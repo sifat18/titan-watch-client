@@ -7,6 +7,8 @@ initFirebase();
 const useFirebase = () => {
     const [user, setuser] = useState({})
     const [error, seterror] = useState('')
+    const [admin, setAdmin] = useState(false);
+
     const [isLoading, setisLoading] = useState(true)
 
     const auth = getAuth();
@@ -92,6 +94,14 @@ const useFirebase = () => {
 
         });
     }, [auth])
+
+
+    useEffect(() => {
+        fetch(`http://localhost:7000/user/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
+
     // signoUT
     const logOut = () => {
         setisLoading(true)
@@ -124,7 +134,8 @@ const useFirebase = () => {
         error,
         logOut,
         signGoogle,
-        seterror
+        seterror,
+        admin
     }
 
 }

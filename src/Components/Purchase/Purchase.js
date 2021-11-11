@@ -5,13 +5,14 @@ import { useParams } from 'react-router';
 import Rating from 'react-rating';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import useAuth from '../Context/useAuth';
 const Purchase = () => {
     const { register, handleSubmit, reset } = useForm();
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [ghori, setghori] = useState({})
-    // const { user } = useAuth();
+    const { user } = useAuth();
     const { id } = useParams();
 
 
@@ -46,18 +47,20 @@ const Purchase = () => {
                 <Col>
                     <Card className='cards bg-card box'>
                         <Card.Body>
-                            <Card.Title >{ghori?.Model}</Card.Title>
-                            <Card.Text>{ghori?.Feature}</Card.Text>
-                            <Card.Text>{ghori?.Brand} {ghori?.Color}</Card.Text>
+                            <Card.Title className='text-center'>{ghori?.Model}</Card.Title>
+                            <Card.Text className='text-center'>{ghori?.Feature}</Card.Text>
+                            <Card.Text className='text-center'>{ghori?.Brand} {ghori?.Color}</Card.Text>
                             <Card.Text className='text-start'>{ghori?.description}</Card.Text>
-                            <Card.Text className='fs-4'>{ghori?.Warranty}</Card.Text>
-                            <Rating
-                                readonly
-                                initialRating={ghori?.star}
-                                emptySymbol='far fa-star text-warning'
-                                fullSymbol='fas fa-star text-warning'
-                            ></Rating>
-                            <Card.Text className='fs-3 fw-bold text-bg'>$ {ghori?.Price}</Card.Text>
+                            <Card.Text className='fs-4 text-center'>{ghori?.Warranty}</Card.Text>
+                            <Card.Text className='text-center'>
+                                <Rating
+                                    readonly
+                                    initialRating={ghori?.star}
+                                    emptySymbol='far fa-star  text-warning'
+                                    fullSymbol='fas fa-star text-warning'
+                                ></Rating>
+                            </Card.Text>
+                            <Card.Text className='fs-3 text-center fw-bold text-bg'>$ {ghori?.Price}</Card.Text>
 
                         </Card.Body>
                     </Card>
@@ -69,8 +72,8 @@ const Purchase = () => {
                             <form className='order mt-5' onSubmit={handleSubmit(onSubmit)}>
                                 <h2 className='text-center mt-5  fw-bold'> Buy Today!!!</h2>
 
-                                <input required placeholder='name' defaultValue={'user.displayName'} className='reservation w-100' {...register("name")} />
-                                <input required placeholder='email' defaultValue={'user.email'} className='reservation w-100'{...register("email")} />
+                                <input required placeholder='name' defaultValue={user.displayName} className='reservation w-100' {...register("name")} />
+                                <input required placeholder='email' defaultValue={user.email} className='reservation w-100'{...register("email")} />
                                 <input required placeholder='adrress' className='reservation w-100'{...register("adrress")} />
                                 <input required placeholder='phone' className='reservation w-100'{...register("phone")} />
 
