@@ -1,9 +1,12 @@
+import axios from 'axios';
 import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Modal, Button } from 'react-bootstrap';
 import './admin.css'
 const Admin = () => {
     const [email, setEmail] = useState('');
-    const [success, setSuccess] = useState(false);
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     // const { token } = useAuth();
 
     const handleOnChange = e => {
@@ -14,6 +17,7 @@ const Admin = () => {
     const handleAddAdmin = e => {
         e.preventDefault()
         console.log(email)
+        axios.put(`http://localhost:7000/admin/${email}`).then(res => res.data.modifiedCount ? handleShow() : '')
         // fetch('', {
         //     method: 'PUT',
         //     headers: {
@@ -36,6 +40,18 @@ const Admin = () => {
                 <input required className='adminAdd   my-4 w-25' type="email" onChange={handleOnChange} placeholder='email' name="email" id="email" />
                 <button className='adminAdd btncolr px-5 mt-4 fs-3 '>Add </button>
             </form>
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Admin Added</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>We have a new admin in the house!!</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="success" onClick={handleClose}>
+                        Cheers!!
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </Container>
     );
 };
