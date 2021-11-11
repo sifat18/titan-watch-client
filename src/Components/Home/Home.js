@@ -72,15 +72,17 @@ const Home = () => {
                             </div>
                             <Card.Body className='reviw mt-5 pt-5 h-50'>
                                 <Card.Title className='text-center fw-bold '>{data.name}</Card.Title>
-                                <Card.Text className='fs-5'>
+                                <Card.Text className='fs-5 text-center'>
                                     {data.descript.slice(0, 90)}
                                 </Card.Text>
-                                <Rating
-                                    readonly
-                                    initialRating={data.star}
-                                    emptySymbol='far fa-star text-warning'
-                                    fullSymbol='fas fa-star text-warning'
-                                ></Rating>
+                                <Card.Text className='text-center'>
+                                    <Rating
+                                        readonly
+                                        initialRating={data.star}
+                                        emptySymbol='far fa-star text-warning'
+                                        fullSymbol='fas fa-star text-warning'
+                                    ></Rating>
+                                </Card.Text>
                             </Card.Body>
                         </Card>
 
