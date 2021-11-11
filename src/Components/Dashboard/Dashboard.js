@@ -74,7 +74,6 @@ const Dashboard = () => {
                 </div>
                 <Col >
                     <Shared />
-                    <h2 className='ms-5'>Contents here</h2>
                     <Switch>
                         <Route exact path={path}>
                             {/* <h3>Please select a topic.</h3> */}
