@@ -8,7 +8,6 @@ const Reviews = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const [show, setShow] = useState(false);
-    const [review, setreview] = useState({});
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const { user } = useAuth()

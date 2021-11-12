@@ -1,13 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row, Button, Modal } from 'react-bootstrap';
+import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 import useAuth from '../../Context/useAuth';
 import ShowDelete from '../DeleteShow/ShowDelete';
 const MyOrder = () => {
     const [productData, setproductData] = useState([])
     const [id, setid] = useState('')
     const [modifiid, setmodifiid] = useState(false)
-    let count = 0;
     const [show, setShow] = useState(false);
     const handleShow = () => setShow(true);
     const handleClose = () => setShow(false);

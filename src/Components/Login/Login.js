@@ -8,7 +8,7 @@ import pic2 from './login.svg';
 import google from './icons8-google.svg';
 const Login = () => {
     const [LoginData, setLoginData] = useState({});
-    const { signGoogle, emailPass, isLoading, error } = useAuth()
+    const { signGoogle, emailPass, error } = useAuth()
     const location = useLocation();
     const history = useHistory();
     // const redirect_url = location.state?.from || '/home';

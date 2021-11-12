@@ -2,11 +2,11 @@ import React from 'react';
 import { Carousel, Col, Container, Row } from 'react-bootstrap';
 import './general.css';
 import pic1 from './carousel-1.jpg'
-import pic2 from './icons8-owl-64.svg'
-import pic3 from './icons8-eyes-cartoon-64.svg'
+// import pic2 from './icons8-owl-64.svg'
+// import pic3 from './icons8-eyes-cartoon-64.svg'
 import pic4 from './icons8-owl-64_1_.svg'
-import pic5 from './vitae-london-8BOZ2TxO2lQ-unsplash.jpg'
-import pic6 from './hunters-race--SDgOlirIaY-unsplash.jpg'
+// import pic5 from './vitae-london-8BOZ2TxO2lQ-unsplash.jpg'
+// import pic6 from './hunters-race--SDgOlirIaY-unsplash.jpg'
 import pic7 from './HORSEBIT-LEATHER-W-MODEL_DPS-e1427482122685.jpg'
 import pic8 from './icons8-watch-64(1).png'
 const General = () => {

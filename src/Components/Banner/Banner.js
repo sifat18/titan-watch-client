@@ -1,10 +1,10 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import './banner.css';
-import pic2 from './120-1202336_mercury-wings-soccer-team-logos-design.svg'
-import pic4 from './373705c7cfd500cfcfd530c5b0ef421b.svg'
+// import pic2 from './120-1202336_mercury-wings-soccer-team-logos-design.svg'
+// import pic4 from './373705c7cfd500cfcfd530c5b0ef421b.svg'
 import pic6 from './images.svg'
-import pic8 from './logo-wing-computer-icons-png-favpng-bV9ajMEgZfpXjtYTWtZda8LQx.svg'
+// import pic8 from './logo-wing-computer-icons-png-favpng-bV9ajMEgZfpXjtYTWtZda8LQx.svg'
 const Banner = () => {
     return (
         // first part of the application

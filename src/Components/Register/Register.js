@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import './register.css';
 import pic1 from './voting.svg';
 import pic2 from './enter.svg';
@@ -9,7 +9,7 @@ const Register = () => {
     const [registerData, setregisterData] = useState({});
     const [passError, setpassError] = useState('');
     const history = useHistory();
-    const { user, createUser, isLoading, error } = useAuth();
+    const { createUser } = useAuth();
     let repassword;
     const handleOnChange = e => {
         const field = e.target.name;
