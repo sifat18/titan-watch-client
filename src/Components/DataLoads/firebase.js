@@ -67,7 +67,7 @@ const useFirebase = () => {
                 // Signed in
                 seterror('')
                 setuser(userCredential.user);
-                const destination = location?.state?.from || '/';
+                const destination = location?.state?.from || '/dashboard';
                 history.replace(destination);
                 // ...
             })
