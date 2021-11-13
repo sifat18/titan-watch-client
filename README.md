@@ -11,6 +11,7 @@ This is application for niche watches! For this project the Titan brand was targ
 - Admin can delete any product or orders as well as approve them
 - Users can see their orders and can cancel the order as well as post reviews
 - This project is built with react-bootstrap react-router axios and database facility with mongoDb 
+- please scroll to see your ordered items in the my orders page for the animation effect
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
