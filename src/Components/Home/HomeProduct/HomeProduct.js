@@ -21,7 +21,7 @@ const HomeProduct = ({ data }) => {
                                 <Card.Body>
                                     <Card.Title>{product.Model}</Card.Title>
                                     <Card.Title>Brand- {product.Brand}</Card.Title>
-                                    <Card.Text>{product.description.slice(0, 102)} </Card.Text>
+                                    <Card.Text>{product.description.slice(0, 80)} </Card.Text>
                                     <NavLink to={`/watch/${product._id}`} className='text-decoration-none fs-3 text-warning'> Purchase <img src={pic2} alt="" height='30' width='30' /></NavLink>
                                 </Card.Body>
                                 <Card.Footer className="text-muted fs-2 fw-bold">Price: ${product.Price}</Card.Footer>

@@ -1,4 +1,4 @@
-import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, getIdToken, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initFirebase from "../../Firebase/firebase.init";
 
@@ -7,6 +7,7 @@ initFirebase();
 const useFirebase = () => {
     const [user, setuser] = useState({})
     const [error, seterror] = useState('')
+    const [token, setoken] = useState('')
     const [admin, setAdmin] = useState(false);
 
     const [isLoading, setisLoading] = useState(true)
@@ -81,9 +82,8 @@ const useFirebase = () => {
 
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                // User is signed in, see docs for a list of available properties
-                // https://firebase.google.com/docs/reference/js/firebase.User
                 setuser(user);
+                getIdToken(user).then(idToken => { setoken(idToken) })
                 // ...
             } else {
                 // User is signed out
@@ -135,7 +135,9 @@ const useFirebase = () => {
         logOut,
         signGoogle,
         seterror,
-        admin
+        admin,
+        token
+
     }
 
 }

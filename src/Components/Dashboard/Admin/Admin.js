@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Container, Modal, Button } from 'react-bootstrap';
+import useAuth from '../../Context/useAuth';
 import './admin.css'
 const Admin = () => {
     const [email, setEmail] = useState('');
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    // const { token } = useAuth();
-
+    const { token } = useAuth();
     const handleOnChange = e => {
         const value = e.target.value;
         setEmail(value)
@@ -17,8 +17,23 @@ const Admin = () => {
     // setting the admin role in db
     const handleAddAdmin = e => {
         e.preventDefault()
+        const user = { email };
         console.log(email)
-        axios.put(`https://vast-everglades-95998.herokuapp.com/admin/${email}`).then(res => res.data.modifiedCount ? handleShow() : '')
+        fetch(`https://vast-everglades-95998.herokuapp.com/admin/email`, {
+            method: 'PUT',
+            headers: {
+                'authorization': `Bearer ${token}`,
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    handleShow();
+                }
+            })
+        // axios.put(`https://vast-everglades-95998.herokuapp.com/admin/${email}`).then(res => res.data.modifiedCount ? handleShow() : '')
 
     }
     return (
