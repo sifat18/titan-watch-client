@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row, Button } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import useAuth from '../../Context/useAuth';
 import ShowDelete from '../DeleteShow/ShowDelete';
 const MyOrder = () => {
@@ -18,7 +19,7 @@ const MyOrder = () => {
     }
     // data filtering by email from db data
     useEffect(() => {
-        fetch(`https://vast-everglades-95998.herokuapp.com/order/${user.email}`).then(res => res.json()).then(data => setproductData(data))
+        fetch(`https://vast-everglades-95998.herokuapp.com/getmail/${user.email}`).then(res => res.json()).then(data => setproductData(data))
     }, [modifiid])
 
     // order remove
@@ -49,7 +50,9 @@ const MyOrder = () => {
                                 <Card.Title className='text-center fw-bold'>{data?.item.Model}</Card.Title>
                                 {/* <Card.Text className=' fs-4'>{data?.site.descript.slice(0, 200)}</Card.Text> */}
                                 <Card.Text className=' fs-3 fw-bold'>Cost ${data?.item.Price}</Card.Text>
-                                <Button variant="warning" onClick={() => getmodal(data?._id)} className='text-dark fs-5 fw-bold'>Cancel Order</Button>
+                                {!data.payment ? <Button variant="warning" onClick={() => getmodal(data?._id)} className='text-dark fs-5 fw-bold'>Cancel Order</Button> : ''}
+                                {data.payment ? <p className='text-white'>paid</p> : <NavLink to={`/dashboard/pay/${data._id}`} className='mx-3 text-decoration-none text-white'><Button variant='success'>proceed to payment</Button></NavLink>}
+
                             </Card.Body>
                         </Card>
 

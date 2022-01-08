@@ -99,7 +99,7 @@ const Dashboard = () => {
                         <AdminRoute path={`${path}/addProduct`}>
                             <AddProduct />
                         </AdminRoute>
-                        <Route path={`${path}/pay`}>
+                        <Route path={`${path}/pay/:appId`}>
                             <Pay />
                         </Route>
                         <Route path={`${path}/myOrder`}><MyOrder />
