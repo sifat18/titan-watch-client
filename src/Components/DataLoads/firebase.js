@@ -1,4 +1,4 @@
-import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider, getIdToken, signInWithPopup, signInWithEmailAndPassword, onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, getIdToken, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initFirebase from "../../Firebase/firebase.init";
 
@@ -97,7 +97,7 @@ const useFirebase = () => {
 
 
     useEffect(() => {
-        fetch(`https://vast-everglades-95998.herokuapp.com/user/${user.email}`)
+        fetch(`https://titanserver.onrender.com/user/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -116,7 +116,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const userData = { email, displayName };
-        fetch('https://vast-everglades-95998.herokuapp.com/user', {
+        fetch('https://titanserver.onrender.com/user', {
             method: method,
             headers: {
                 'content-type': 'application/json'

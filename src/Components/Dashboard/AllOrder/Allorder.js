@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import ShowDelete from '../DeleteShow/ShowDelete';
 import ShowUpdate from '../ShowModal/ShowUpdate';
@@ -17,7 +17,7 @@ const Allorder = () => {
     const handleClose2 = () => setShow2(false);
     let count = 0;
     useEffect(() => {
-        fetch(`https://vast-everglades-95998.herokuapp.com/order`).then(res => res.json()).then(data => setorderData(data))
+        fetch(`https://titanserver.onrender.com/order`).then(res => res.json()).then(data => setorderData(data))
     }, [modifiid])
     // model display function on update
     const getmodal = (id) => {
@@ -33,7 +33,7 @@ const Allorder = () => {
     }
     // removing order from db
     const handleremove = (id) => {
-        axios.delete(`https://vast-everglades-95998.herokuapp.com/order/${id}`).then(res => {
+        axios.delete(`https://titanserver.onrender.com/order/${id}`).then(res => {
             if (res.data) {
                 const collect = orderData.filter(order => order._id !== id)
                 setorderData(collect);
@@ -44,7 +44,7 @@ const Allorder = () => {
     }
     // updating status order in db
     const handleUpdate = (id) => {
-        axios.put(`https://vast-everglades-95998.herokuapp.com/orderUpdate/${id}`).then(res => {
+        axios.put(`https://titanserver.onrender.com/orderUpdate/${id}`).then(res => {
             if (res.data.modifiedCount) {
                 setmodifiid(true)
             }

@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row, Button } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import useAuth from '../../Context/useAuth';
 import ShowDelete from '../DeleteShow/ShowDelete';
@@ -19,12 +19,12 @@ const MyOrder = () => {
     }
     // data filtering by email from db data
     useEffect(() => {
-        fetch(`https://vast-everglades-95998.herokuapp.com/getmail/${user.email}`).then(res => res.json()).then(data => setproductData(data))
+        fetch(`https://titanserver.onrender.com/getmail/${user.email}`).then(res => res.json()).then(data => setproductData(data))
     }, [modifiid])
 
     // order remove
     const handleremove = (id) => {
-        axios.delete(`https://vast-everglades-95998.herokuapp.com/order/${id}`).then(res => {
+        axios.delete(`https://titanserver.onrender.com/order/${id}`).then(res => {
             if (res.data) {
                 const collect = productData.filter(product => product._id !== id)
                 setproductData(collect);

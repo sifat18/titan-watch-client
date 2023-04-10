@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import './Purchase.css'
-import { Card, Col, Container, Modal, Row, Button } from 'react-bootstrap';
-import { useParams } from 'react-router';
-import Rating from 'react-rating';
-import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Button, Card, Col, Container, Modal, Row } from 'react-bootstrap';
+import { useForm } from 'react-hook-form';
+import Rating from 'react-rating';
+import { useParams } from 'react-router';
 import useAuth from '../Context/useAuth';
+import './Purchase.css';
 const Purchase = () => {
     const { register, handleSubmit, reset } = useForm();
     const [show, setShow] = useState(false);
@@ -21,12 +21,12 @@ const Purchase = () => {
         console.log(data)
         data.item = ghori;
         data.orderStatus = 'Pending';
-        axios.post('https://vast-everglades-95998.herokuapp.com/order', data).then(res => res.data.insertedId ? handleShow() : '')
+        axios.post('https://titanserver.onrender.com/order', data).then(res => res.data.insertedId ? handleShow() : '')
 
     }
     // single data load based on id
     useEffect(() => {
-        fetch(`https://vast-everglades-95998.herokuapp.com/watch/${id}`).then(res => res.json()).then(data => setghori(data))
+        fetch(`https://titanserver.onrender.com/watch/${id}`).then(res => res.json()).then(data => setghori(data))
     }, [id])
 
 

@@ -1,6 +1,5 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
-import React, { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 
 const CheckOut = (props) => {
@@ -14,7 +13,7 @@ const CheckOut = (props) => {
     const [clientSecret, setClientSecret] = useState('');
     const [processing, setProcessing] = useState(false);
     useEffect(() => {
-        fetch('https://vast-everglades-95998.herokuapp.com/create-payment-intent', {
+        fetch('https://titanserver.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -80,7 +79,7 @@ const CheckOut = (props) => {
             last4: paymentMethod.card.last4,
             transaction: paymentIntent.client_secret.slice('_secret')[0]
         }
-        const url = `https://vast-everglades-95998.herokuapp.com/order/${id}`;
+        const url = `https://titanserver.onrender.com/order/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

@@ -1,8 +1,8 @@
 import axios from 'axios';
-import React, { useState } from 'react';
-import { Container, Modal, Button } from 'react-bootstrap';
-import useAuth from '../../Context/useAuth';
+import { useState } from 'react';
+import { Button, Container, Modal } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
+import useAuth from '../../Context/useAuth';
 
 const Reviews = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -16,7 +16,7 @@ const Reviews = () => {
     const onSubmit = data => {
         reset('');
         console.log(data)
-        axios.post('https://vast-everglades-95998.herokuapp.com/reviews', data).then(res => res.data.insertedId ? handleShow() : '')
+        axios.post('https://titanserver.onrender.com/reviews', data).then(res => res.data.insertedId ? handleShow() : '')
 
     }
 

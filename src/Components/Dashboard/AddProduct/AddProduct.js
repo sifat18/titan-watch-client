@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useState } from 'react';
-import { Container, Modal, Button } from 'react-bootstrap';
+import { useState } from 'react';
+import { Button, Container, Modal } from 'react-bootstrap';
 
 const AddProduct = () => {
     const [show, setShow] = useState(false);
@@ -21,7 +21,7 @@ const AddProduct = () => {
     const handleAddProduct = e => {
         e.preventDefault()
         console.log(product)
-        axios.post(`https://vast-everglades-95998.herokuapp.com/watch`, product).then(res => res.data ? handleShow() : '')
+        axios.post(`https://titanserver.onrender.com/watch`, product).then(res => res.data ? handleShow() : '')
 
     }
     return (

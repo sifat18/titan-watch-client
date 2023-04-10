@@ -1,8 +1,7 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { Container, Modal, Button } from 'react-bootstrap';
+import { useState } from 'react';
+import { Button, Container, Modal } from 'react-bootstrap';
 import useAuth from '../../Context/useAuth';
-import './admin.css'
+import './admin.css';
 const Admin = () => {
     const [email, setEmail] = useState('');
     const [show, setShow] = useState(false);
@@ -19,7 +18,7 @@ const Admin = () => {
         e.preventDefault()
         const user = { email };
         console.log(email)
-        fetch(`https://vast-everglades-95998.herokuapp.com/admin/email`, {
+        fetch(`https://titanserver.onrender.com/admin/email`, {
             method: 'PUT',
             headers: {
                 'authorization': `Bearer ${token}`,
@@ -33,7 +32,7 @@ const Admin = () => {
                     handleShow();
                 }
             })
-        // axios.put(`https://vast-everglades-95998.herokuapp.com/admin/${email}`).then(res => res.data.modifiedCount ? handleShow() : '')
+        // axios.put(`https://titanserver.onrender.com/admin/${email}`).then(res => res.data.modifiedCount ? handleShow() : '')
 
     }
     return (

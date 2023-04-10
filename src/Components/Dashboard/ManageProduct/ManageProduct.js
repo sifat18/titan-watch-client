@@ -1,6 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { Container, Table, } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
+import { Container, Table } from 'react-bootstrap';
 import ShowDelete from '../DeleteShow/ShowDelete';
 const ManageProduct = () => {
     const [productData, setproductData] = useState([])
@@ -12,7 +12,7 @@ const ManageProduct = () => {
     const handleClose = () => setShow(false);
     //    fetching all watch data from db
     useEffect(() => {
-        fetch(`https://vast-everglades-95998.herokuapp.com/watch`).then(res => res.json()).then(data => setproductData(data))
+        fetch(`https://titanserver.onrender.com/watch`).then(res => res.json()).then(data => setproductData(data))
     }, [modifiid])
     // display on delete
     const getmodal = (id) => {
@@ -22,7 +22,7 @@ const ManageProduct = () => {
     }
     // removing any product from db
     const handleremove = (id) => {
-        axios.delete(`https://vast-everglades-95998.herokuapp.com/watch/${id}`).then(res => {
+        axios.delete(`https://titanserver.onrender.com/watch/${id}`).then(res => {
             if (res.data) {
                 const collect = productData.filter(product => product._id !== id)
                 setproductData(collect);
