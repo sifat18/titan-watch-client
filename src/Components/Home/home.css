@@ -1,12 +1,13 @@
 .reviw{
     position: relative;
-    top:-4.5rem;
     transform:
     perspective(750px)
     translate3d(0px, 0px, -50px)
     rotateX(27deg)
     scale(0.9, 0.9);
   border-radius: 20px;
+  height: 45vh;
+  font-size: 1.2em;
   border: 5px solid #e6e6e6;
   box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
   transition: 0.4s ease-in-out transform;
@@ -21,3 +22,18 @@
      object-fit : contain ;
      margin-bottom: 5rem;
   }
+  .commentMargin{
+    box-sizing: border-box;
+    padding-left: 5em;
+    padding-right: 5em;
+    text-align: "center"
+}
+@media only screen and (max-width: 600px) {
+    .commentMargin{
+        padding: 0 2em;
+    }   
+    .reviw{
+      min-height: 55vh;
+      /* font-size: 2em; */
+    }
+}
