@@ -6,7 +6,7 @@
     rotateX(27deg)
     scale(0.9, 0.9);
   border-radius: 20px;
-  height: 25vh;
+  min-height: 25vh;
   padding-top: 2.5em;
   font-size: 1.2em;
   border: 5px solid #e6e6e6;
@@ -30,14 +30,17 @@
     text-align: "center"
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 601x) {
   .commentMargin{
       padding: 0 2em;
   }   
   .reviw{
-    height: 35vh;
-    /* min-height: 45vh; */
+    /* height: 40vh; */
+    min-height: 45vh;
     /* font-size: 2em; */
+  }
+  .paddingTop{
+    padding-top: 0.8em;
   }
 }
 
@@ -47,8 +50,8 @@
         padding: 0 2em;
     }   
     .reviw{
-      height: 0;
-      min-height: 35vh;
+      /* height: 0; */
+      min-height: 40vh;
       /* font-size: 2em; */
     }
 }

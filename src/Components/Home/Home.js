@@ -87,7 +87,7 @@ const Home = () => {
                 />
               </div>
               <Card.Body className="reviw ">
-                <Card.Title className="text-center pt-4 fw-bold ">
+                <Card.Title className="text-center paddingTop fw-bold ">
                   {data.name}
                 </Card.Title>
                 <Card.Text className=" text-center" style={{}}>
