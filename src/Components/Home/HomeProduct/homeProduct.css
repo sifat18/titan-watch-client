@@ -21,6 +21,7 @@ overflow: hidden;
     border-bottom-color:rgba(225, 225, 225, 0.1) ;
     border-right-color:rgba(225, 225, 225, 0.1) ;
     color: wheat;
+    width: 330px;
 }
 .bg-card{
     background-color: rgba(225, 225, 225, 0.1);
@@ -33,7 +34,6 @@ overflow: hidden;
     -ms-transition:all .9s ease; 
     width: 100%;
     overflow: hidden;
-
     height: 200px;
     background-color: rgba(57, 62, 93, 0.7);
 }
@@ -53,3 +53,35 @@ overflow: hidden;
   transform:scale(1.1);
 }
 
+.product-header{
+    color: wheat;
+    margin-top: 0.5em;
+    font-weight: 500;
+line-height: 2rem;
+    font-family: 'Libre Bodoni', serif;
+    font-size: 1rem;
+    text-align: center;
+
+    /* text-transform: uppercase; */
+
+}
+.product-sub{
+    color:wheat;
+    font-size: 0.8rem;
+font-family: Kanit;
+font-weight: 300;
+text-align: center;
+
+}
+.product-description{
+    color:wheat;
+    font-size: 0.8rem;
+font-family: Kanit;
+font-weight: 300;
+text-align: center;
+}
+.product-extra{
+    /* font-family: Kanit; */
+    font-family: 'Libre Bodoni', serif;
+font-weight: 300;
+}

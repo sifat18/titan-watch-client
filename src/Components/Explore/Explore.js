@@ -11,7 +11,7 @@ const Explore = () => {
   return (
     // data display in cards
     <Container data-aos="zoom-out" fluid className=" explore-body py-5">
-      <h2 className="text-bg text-center">
+      <h2 className="collection text-center">
         Collections
         <img src={pic1} alt="" className="" />
       </h2>
