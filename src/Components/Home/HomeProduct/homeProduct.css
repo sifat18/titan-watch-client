@@ -1,87 +1,85 @@
 /* collections bg */
-.homeProd{
-    background-color: rgba(0, 0, 0, 0.9);
-    background-blend-mode: darken,luminosity;
+.homeProd {
+  background-color: rgba(0, 0, 0, 0.9);
+  background-blend-mode: darken, luminosity;
 
-    background-image: url('https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHdhdGNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60');
-    background-size: cover;
-    background-position: center left;
-    background-attachment: fixed;
-min-height: 100vh;
-overflow: hidden;
- }
-/* card styles */
- .cards{
-    border-radius: 1rem;
-    border: 1px solid transparent;
-    backdrop-filter: blur(1rem);
-    box-shadow: 1.3rem 1.3rem 1.3rem rgba(0,0,0,0.5);
-    border-top-color:rgba(225, 225, 225, 0.5) ;
-    border-left-color:rgba(225, 225, 225, 0.5) ;
-    border-bottom-color:rgba(225, 225, 225, 0.1) ;
-    border-right-color:rgba(225, 225, 225, 0.1) ;
-    color: wheat;
-    width: 330px;
+  background-image: url("https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHdhdGNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+  background-size: cover;
+  background-position: center left;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow: hidden;
 }
-.bg-card{
-    background-color: rgba(225, 225, 225, 0.1);
+/* card styles */
+.cards {
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  backdrop-filter: blur(1rem);
+  box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+  border-top-color: rgba(225, 225, 225, 0.5);
+  border-left-color: rgba(225, 225, 225, 0.5);
+  border-bottom-color: rgba(225, 225, 225, 0.1);
+  border-right-color: rgba(225, 225, 225, 0.1);
+  color: wheat;
+  width: 330px;
+}
+.bg-card {
+  background-color: rgba(225, 225, 225, 0.1);
 }
 /* img style card */
-.img1{
-    -webkit-transition:all .9s ease; 
-    -moz-transition:all .9s ease; 
-    -o-transition:all .9s ease;
-    -ms-transition:all .9s ease; 
-    width: 100%;
-    overflow: hidden;
-    height: 200px;
-    background-color: rgba(57, 62, 93, 0.7);
+.img1 {
+  -webkit-transition: all 0.9s ease;
+  -moz-transition: all 0.9s ease;
+  -o-transition: all 0.9s ease;
+  -ms-transition: all 0.9s ease;
+  width: 100%;
+  overflow: hidden;
+  height: 300px;
+  background-color: rgba(57, 62, 93, 0.7);
 }
 
-.image-box{
-    background: #ffffff;
-    overflow: hidden;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
-    border-radius: 5px;
-  }
-.bg-card:hover .img1{
-    opacity: 0.7;
-  -webkit-transform:scale(1.05);
-  -moz-transform:scale(1.05);
-  -ms-transform:scale(1.05);
-  -o-transform:scale(1.05);
-  transform:scale(1.1);
+.image-box {
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.bg-card:hover .img1 {
+  opacity: 0.7;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-.product-header{
-    color: wheat;
-    margin-top: 0.5em;
-    font-weight: 500;
-line-height: 2rem;
-    font-family: 'Libre Bodoni', serif;
-    font-size: 1rem;
-    text-align: center;
+.product-header {
+  color: wheat;
+  margin-top: 0.5em;
+  font-weight: 500;
+  line-height: 2rem;
+  font-family: "Libre Bodoni", serif;
+  font-size: 1rem;
+  text-align: center;
 
-    /* text-transform: uppercase; */
-
+  /* text-transform: uppercase; */
 }
-.product-sub{
-    color:wheat;
-    font-size: 0.8rem;
-font-family: Kanit;
-font-weight: 300;
-text-align: center;
-
+.product-sub {
+  color: wheat;
+  font-size: 0.8rem;
+  font-family: Kanit;
+  font-weight: 300;
+  text-align: center;
 }
-.product-description{
-    color:wheat;
-    font-size: 0.8rem;
-font-family: Kanit;
-font-weight: 300;
-text-align: center;
+.product-description {
+  color: wheat;
+  font-size: 0.8rem;
+  font-family: Kanit;
+  font-weight: 300;
+  text-align: center;
 }
-.product-extra{
-    /* font-family: Kanit; */
-    font-family: 'Libre Bodoni', serif;
-font-weight: 300;
+.product-extra {
+  /* font-family: Kanit; */
+  font-family: "Libre Bodoni", serif;
+  font-weight: 300;
 }

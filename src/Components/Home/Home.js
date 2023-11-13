@@ -66,9 +66,9 @@ const Home = () => {
         className="homeProd pt-5 commentMargin text-center  "
         style={{}}
       >
-        <h2 className="text-bg text-center">
-          <img src={review1} alt="" className="" />
-          Reviews
+        <h2 className="collection text-center">
+          <img src={review1} alt=" " className="" />
+          Reviews 
           <img src={review} alt="" className="" />
         </h2>
         <hr className="mx-auto w-25 bg-white" />
@@ -76,21 +76,21 @@ const Home = () => {
           {reviewData.map((data) => (
             <Card
               key={data._id}
-              className="border-0 p-2 cards bg-card  w-75 "
+              className="border-0 p-2 cards bg-card  w-50 "
               style={{ width: "" }}
             >
               <div className="image-box">
                 <Card.Img
                   variant="top"
                   src={data.img}
-                  className="img-fluid img1 px-5"
+                  className="img-fluid img1"
                 />
               </div>
               <Card.Body className="reviw ">
-                <Card.Title className="text-center paddingTop fw-bold ">
+                <Card.Title className="text-center paddingTop fw-bold product-extra">
                   {data.name}
                 </Card.Title>
-                <Card.Text className=" text-center" style={{}}>
+                <Card.Text className=" text-center general-sub" style={{}}>
                   {data.descript.slice(0, 50) + "..."}
                 </Card.Text>
                 <Card.Text className="text-center">
