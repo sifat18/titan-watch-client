@@ -29,13 +29,13 @@
   margin: 20px auto;
 }
 .detailsAlignment {
-  margin: auto 20rem;
+  margin: auto 12rem;
 }
 
 @media (max-width: 800px) {
   .bg {
-    min-height: 400vh;
-    min-width: 104vw;
+    min-height: 200vh;
+    min-width: 103.94vw;
   }
   .detailsAlignment {
     margin: auto 0;
