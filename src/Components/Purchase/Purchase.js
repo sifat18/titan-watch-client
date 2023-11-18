@@ -37,30 +37,45 @@ const Purchase = () => {
       style={{
         background: `url("${ghori?.Img}") no-repeat center center/cover`,
       }}
-      className="detail"
+      // className="detail"
     >
       <div className="bg"></div>
       <Row data-aos="fade-up-left" xs={1} md={3} className="g-4 py-5">
         <Col>
-          <Card className="cards bg-card box">
+          <Card
+            className="cards bg-card"
+            style={{
+              width: "330px",
+              // backgroundColor: "red",
+            }}
+          >
             <Card.Img
-              variant="top"
               src={ghori?.Img}
-              className="img-fluid my-3"
+              className="img-fluid "
+              style={{
+                width: "100%",
+                height: "34rem",
+              }}
             />
           </Card>
         </Col>
 
         <Col>
-          <Card className="cards bg-card box">
+          <Card className="cards bg-card">
             <Card.Body>
-              <Card.Title className="text-center">{ghori?.Model}</Card.Title>
-              <Card.Text className="text-center">{ghori?.Feature}</Card.Text>
-              <Card.Text className="text-center">
+              <Card.Title className="text-center product-header">
+                {ghori?.Model}
+              </Card.Title>
+              <Card.Text className="text-center product-sub">
+                {ghori?.Feature}
+              </Card.Text>
+              <Card.Text className="text-center product-sub ">
                 {ghori?.Brand} {ghori?.Color}
               </Card.Text>
-              <Card.Text className="text-start">{ghori?.description}</Card.Text>
-              <Card.Text className="fs-4 text-center">
+              <Card.Text className="text-center product-sub">
+                {ghori?.description}
+              </Card.Text>
+              <Card.Text className="text-center product-extra">
                 {ghori?.Warranty}
               </Card.Text>
               <Card.Text className="text-center">
@@ -71,7 +86,7 @@ const Purchase = () => {
                   fullSymbol="fas fa-star text-warning"
                 ></Rating>
               </Card.Text>
-              <Card.Text className="fs-3 text-center fw-bold text-bg">
+              <Card.Text className=" text-center fw-bold text-bg product-extra">
                 $ {ghori?.Price}
               </Card.Text>
             </Card.Body>
@@ -82,7 +97,10 @@ const Purchase = () => {
           <Card className="cards bg-card box">
             <Card.Body>
               <form className="order mt-5" onSubmit={handleSubmit(onSubmit)}>
-                <h2 className="text-center mt-5  fw-bold"> Buy Today!!!</h2>
+                <h2 className="fs-4 text-center mt-5  fw-bold product-header">
+                  {" "}
+                  Buy Today !!!
+                </h2>
 
                 <input
                   required
@@ -112,7 +130,7 @@ const Purchase = () => {
                 />
 
                 <input
-                  className="reservation w-100 bg-danger text-bg"
+                  className="reservation w-100 bg-danger text-bg product-extra mt-5"
                   type="submit"
                 />
               </form>

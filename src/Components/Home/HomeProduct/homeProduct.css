@@ -21,7 +21,7 @@
   border-bottom-color: rgba(225, 225, 225, 0.1);
   border-right-color: rgba(225, 225, 225, 0.1);
   color: wheat;
-  width: 330px;
+  width: 330px!important;
 }
 .bg-card {
   background-color: rgba(225, 225, 225, 0.1);
