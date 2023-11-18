@@ -34,7 +34,7 @@ const Admin = () => {
   };
   return (
     <Container>
-      <h2 data-aos="fade-down-right" className="text-center">
+      <h2 data-aos="fade-down-right" className="product-header fs-3 text-center">
         Add An Admin
       </h2>
       <form
@@ -43,14 +43,14 @@ const Admin = () => {
       >
         <input
           required
-          className="adminAdd   my-4 w-25"
+          className="adminAdd   my-4 w-75"
           type="email"
           onChange={handleOnChange}
           placeholder="email"
           name="email"
           id="email"
         />
-        <button className="adminAdd btncolr px-5 mt-4 fs-3 ">Add </button>
+        <button className="adminAdd btncolr px-5 mt-4 product-extra ">Add </button>
       </form>
       {/* modal for showing confirmation */}
       <Modal show={show} onHide={handleClose}>

@@ -22,22 +22,22 @@ const Header = () => {
                         className="d-inline-block align-top"
                         alt=""
                     />    </Navbar.Brand></NavLink>
-                <NavLink to='/home' className='text-decoration-none'><Navbar.Brand className='fw-bold' href="#home">TICK~TOCK</Navbar.Brand></NavLink>
+                <NavLink to='/home' className='text-decoration-none product-header'><Navbar.Brand className='fw-bold' href="#home">TICK~TOCK</Navbar.Brand></NavLink>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav variant="pills" className="ms-auto">
-                        <NavLink to='/home' className='text-decoration-none'>  <Nav.Link href='/home'>Home</Nav.Link></NavLink>
-                        <NavLink to='/explore' className='text-decoration-none'>  <Nav.Link href='/explore'>Explore</Nav.Link></NavLink>
-                        {user.displayName && <NavLink to='/dashboard' className='text-decoration-none'>  <Nav.Link href='/dashboard'>Dashboard</Nav.Link></NavLink>
+                    <Nav variant="pills" className="ms-auto ">
+                        <NavLink to='/home' className='text-decoration-none product-header'>  <Nav.Link href='/home'>Home</Nav.Link></NavLink>
+                        <NavLink to='/explore' className='text-decoration-none product-header'>  <Nav.Link href='/explore'>Explore</Nav.Link></NavLink>
+                        {user.displayName && <NavLink to='/dashboard' className='text-decoration-none product-header'>  <Nav.Link href='/dashboard'>Dashboard</Nav.Link></NavLink>
                         }
-                        {user.displayName && <Navbar.Text>
+                        {user.displayName && <Navbar.Text className='product-header'>
                             Signed in as: <a href="#login">{user.displayName}</a>
                         </Navbar.Text>}
-                        {user.displayName && <Nav.Link onClick={logOut}>LogOut</Nav.Link>
+                        {user.displayName && <Nav.Link className='product-header' onClick={logOut}>LogOut</Nav.Link>
                         }
-                        {!user.displayName && <NavLink to='/register' className='text-decoration-none'><Nav.Link href="#register" >Register</Nav.Link></NavLink>
+                        {!user.displayName && <NavLink to='/register' className='text-decoration-none product-header'><Nav.Link href="#register" >Register</Nav.Link></NavLink>
                         }
-                        {!user.displayName && <NavLink to='/login' className='text-decoration-none'><Nav.Link href="#login" >Login</Nav.Link></NavLink>
+                        {!user.displayName && <NavLink to='/login' className='text-decoration-none product-header'><Nav.Link href="#login" >Login</Nav.Link></NavLink>
                         }
                     </Nav>
 

@@ -33,23 +33,23 @@ const ManageProduct = () => {
     }
     return (
         // data display in table
-        <Container data-aos="flip-right" fluid className='pt-3   text-center allorderbg'>
+        <Container data-aos="flip-right" fluid className=' text-center allorderbg'>
             <Table responsive striped bordered hover >
                 <thead>
                     <tr className='text-center'>
-                        <th className='fs-3 text-white'>Sl</th>
-                        <th className='fs-3 text-white'>Brand</th>
-                        <th className='fs-3 text-white'>Model</th>
-                        <th className='fs-3 text-white'>Delete</th>
+                        <th className='product-header text-white'>Sl</th>
+                        <th className='product-header text-white'>Brand</th>
+                        <th className='product-header text-white'>Model</th>
+                        <th className='product-header text-white'>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                     {productData.map(product =>
                         <tr key={product._id} className='text-center'>
-                            <td className='fs-4 text-white '>{++count}</td>
-                            <td className='fs-4 text-white '>{product.Brand}</td>
-                            <td className='fs-4 text-white '>{product.Model}</td>
-                            <td className='fs-4 text-white '><button type='button' onClick={() => getmodal(product?._id)} className='d-block border-0 mx-auto'>delete</button></td>
+                            <td className=' text-white '>{++count}</td>
+                            <td className=' text-white '>{product.Brand}</td>
+                            <td className=' text-white '>{product.Model}</td>
+                            <td className=' text-white '><button type='button' onClick={() => getmodal(product?._id)} className='d-block border-0 mx-auto'>delete</button></td>
                         </tr>
                     )}
                 </tbody>

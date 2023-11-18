@@ -55,27 +55,27 @@ const Allorder = () => {
 
     return (
         // all order display section
-        <Container data-aos="fade-up-left" fluid className='pt-3   text-center allorderbg'>
+        <Container data-aos="fade-up-left" fluid className='  text-center allorderbg'>
             <Table responsive striped bordered hover >
                 <thead>
                     <tr className='text-center'>
-                        <th className='fs-3 text-white'>Sl</th>
-                        <th className='fs-3 text-white'>UserName</th>
-                        <th className='fs-3 text-white'>Model</th>
-                        <th className='fs-3 text-white'>Status</th>
-                        <th className='fs-3 text-white'>Delete</th>
-                        <th className='fs-3 text-white'>Update Status</th>
+                        <th className='product-header text-white'>Sl</th>
+                        <th className='product-header text-white'>UserName</th>
+                        <th className='product-header text-white'>Model</th>
+                        <th className='product-header text-white'>Status</th>
+                        <th className='product-header text-white'>Delete</th>
+                        <th className='product-header text-white'>Update Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     {orderData.map(order =>
                         <tr key={order._id} className='text-center'>
-                            <td className='fs-4 text-white '>{++count}</td>
-                            <td className='fs-4 text-white '>{order.name}</td>
-                            <td className='fs-4 text-white '>{order.item.Model}</td>
-                            <td className='fs-4 text-white fw-bold'><span className={order.orderStatus === 'Pending' ? 'text-danger' : 'text-success'}>{order.orderStatus}</span></td>
-                            <td className='fs-4 text-white '><button type='button' onClick={() => deleteModal(order?._id)} className='d-block border-0 mx-auto'>delete</button></td>
-                            <td className='fs-4 text-white '><button type='button' onClick={() => getmodal(order?._id)} className='d-block border-0 mx-auto'>ship</button></td>
+                            <td className='text-white '>{++count}</td>
+                            <td className='text-white '>{order.name}</td>
+                            <td className='text-white '>{order.item.Model}</td>
+                            <td className='text-white fw-bold'><span className={order.orderStatus === 'Pending' ? 'text-danger' : 'text-success'}>{order.orderStatus}</span></td>
+                            <td className='text-white '><button type='button' onClick={() => deleteModal(order?._id)} className='d-block border-0 mx-auto'>delete</button></td>
+                            <td className=' text-white '><button type='button' onClick={() => getmodal(order?._id)} className='d-block border-0 mx-auto'>ship</button></td>
                         </tr>
                     )}
                 </tbody>

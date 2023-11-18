@@ -30,7 +30,7 @@ const AddProduct = () => {
       <form className="mt-3 pt-2" onSubmit={handleAddProduct}>
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="Price"
@@ -39,7 +39,7 @@ const AddProduct = () => {
         />
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="Model"
@@ -48,7 +48,7 @@ const AddProduct = () => {
         />
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="Brand"
@@ -57,7 +57,7 @@ const AddProduct = () => {
         />
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="Model"
@@ -66,7 +66,7 @@ const AddProduct = () => {
         />
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="Feature"
@@ -75,7 +75,7 @@ const AddProduct = () => {
         />
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="Color"
@@ -84,7 +84,7 @@ const AddProduct = () => {
         />
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="Warranty"
@@ -93,7 +93,7 @@ const AddProduct = () => {
         />
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="ImgLink"
@@ -103,7 +103,7 @@ const AddProduct = () => {
         <textarea
           rows="5"
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="text"
           onChange={handleOnChange}
           placeholder="Description"
@@ -112,7 +112,7 @@ const AddProduct = () => {
         />
         <input
           required
-          className="inputs my-4 w-50"
+          className="inputs my-4 w-75"
           type="number"
           min="1"
           max="5"

@@ -122,7 +122,7 @@ const Dashboard = () => {
             <img src={out} height="20" width="20" alt="" /> LogOut
           </span>
         </div>
-        <Col>
+        <Col className="product-sub">
           {/* nested routes */}
           
           <Switch>
@@ -134,7 +134,9 @@ const Dashboard = () => {
                 </div>
             </Route>
             <AdminRoute path={`${path}/makeAdmin`}>
+            <div className="dashMargin">
               <Admin />
+              </div>
             </AdminRoute>
             <AdminRoute path={`${path}/manageAllOrder`}>
               <Allorder />
