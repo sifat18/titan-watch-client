@@ -40,7 +40,7 @@ const Purchase = () => {
       // className="detail"
     >
       <div className="bg"></div>
-      <Row data-aos="fade-up-left" xs={1} md={3} className="g-4 py-5">
+      <Row data-aos="fade-up-left" xs={1} md={3} className="g-4 py-5 detailsAlignment">
         <Col>
           <Card
             className="cards bg-card"
@@ -61,21 +61,21 @@ const Purchase = () => {
         </Col>
 
         <Col>
-          <Card className="cards bg-card">
+          <Card className="cards bg-card " style={{ height: "34rem",}}>
             <Card.Body>
               <Card.Title className="text-center product-header">
                 {ghori?.Model}
               </Card.Title>
-              <Card.Text className="text-center product-sub">
+              <Card.Text className="text-center product-sub mt-3">
                 {ghori?.Feature}
               </Card.Text>
               <Card.Text className="text-center product-sub ">
                 {ghori?.Brand} {ghori?.Color}
               </Card.Text>
-              <Card.Text className="text-center product-sub">
+              <Card.Text className="text-center product-sub mt-3">
                 {ghori?.description}
               </Card.Text>
-              <Card.Text className="text-center product-extra">
+              <Card.Text className="text-center product-extra mt-5">
                 {ghori?.Warranty}
               </Card.Text>
               <Card.Text className="text-center">
