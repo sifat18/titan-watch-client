@@ -15,3 +15,4 @@ This is application for niche watches! For this project the Titan brand was targ
 - Users can see their orders and can cancel the order as well as post reviews
 - This project is built with react-bootstrap react-router axios and database facility with mongoDb
 - please scroll to see your ordered items in the my orders page for the animation effect
+- Stripe Payment Gateway implementation
