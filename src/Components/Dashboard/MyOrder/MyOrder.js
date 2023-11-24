@@ -36,13 +36,9 @@ const MyOrder = () => {
   };
 
   return (
-    <Container
-      data-aos="zoom-in"
-      fluid
-      className="pt-3   text-center allorderbg"
-    >
+    <Container data-aos="zoom-in" fluid className="text-center allorderbg ">
       <h2 className="text-white fs-3 fw-bold text-center mb-3"> My Orders</h2>
-      {!productData.length && (
+      {!productData.length > 0 && (
         <p className="green fs-3 fw-bold text-center mb-3">
           {" "}
           You don't have any pending orders yet!!
@@ -50,13 +46,13 @@ const MyOrder = () => {
       )}
       <Row
         xs={1}
-        md={2}
-        className="g-4"
-        data-aos="fade-right"
-        data-aos-offset="300"
+        md={3}
+        className=""
+        data-aos="fade-left"
+        data-aos-offset="100"
         data-aos-easing="ease-in-sine"
       >
-        {productData.map((data) => (
+        {productData?.map((data) => (
           <Col>
             <Card
               key={data?._id}
@@ -70,18 +66,18 @@ const MyOrder = () => {
                 />
               </div>
               <Card.Body>
-                <Card.Title className="text-center fw-bold">
+                <Card.Title className="text-center fw-bold fs-5 green">
                   {data?.item.Model}
                 </Card.Title>
                 {/* <Card.Text className=' fs-4'>{data?.site.descript.slice(0, 200)}</Card.Text> */}
-                <Card.Text className=" fs-3 fw-bold">
+                <Card.Text className=" fs-6 fw-bold green">
                   Cost ${data?.item.Price}
                 </Card.Text>
                 {!data.payment ? (
                   <Button
-                    variant="warning"
+                    variant="white"
                     onClick={() => getmodal(data?._id)}
-                    className="text-dark fs-5 fw-bold"
+                    className=" product-extra text-white"
                   >
                     Cancel Order
                   </Button>
@@ -89,13 +85,15 @@ const MyOrder = () => {
                   ""
                 )}
                 {data.payment ? (
-                  <p className="text-white">paid</p>
+                  <p className="text-white product-extra fs-5">paid</p>
                 ) : (
                   <NavLink
                     to={`/dashboard/pay/${data._id}`}
                     className="mx-3 text-decoration-none text-white"
                   >
-                    <Button variant="success">proceed to payment</Button>
+                    <Button variant="success" className="mt-2 product-extra">
+                      Proceed to Payment
+                    </Button>
                   </NavLink>
                 )}
               </Card.Body>

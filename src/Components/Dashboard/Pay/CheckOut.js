@@ -88,7 +88,7 @@ const CheckOut = (props) => {
   };
 
   return (
-    <Container>
+    <Container className="checkout-cards px-5 pt-5 pb-3">
       <form onSubmit={handleSubmit}>
         <CardElement
           options={{
@@ -109,7 +109,11 @@ const CheckOut = (props) => {
         {processing ? (
           ""
         ) : (
-          <button type="submit" className="mt-4 mx-5" disabled={!stripe || s}>
+          <button
+            type="submit"
+            className="mt-5 mx-5 product-header text-dark "
+            disabled={!stripe || s}
+          >
             Pay ${price}
           </button>
         )}

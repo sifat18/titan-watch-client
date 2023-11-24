@@ -78,3 +78,13 @@ a {
     overflow: hidden;
   }
 }
+.table-hover tr  td img {
+  display: none;
+  }
+  .table-hover tr:hover > td img {
+display: block;
+}
+.table-hover tr:hover{
+  box-shadow: rgba(65, 220, 70, 0.797)0px 3px 8px;
+  cursor: pointer;
+}

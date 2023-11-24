@@ -58,11 +58,11 @@ const Dashboard = () => {
             {/* user routes*/}
             {!admin && (
               <div>
-                <Link to={`${url}/pay`}>
+                {/* <Link to={`${url}/pay`}>
                   <ListGroup.Item className=" border-end-0 border-top-0 border-start-0">
                     <img src={cash} height="20" width="20" alt="" /> Pay
                   </ListGroup.Item>
-                </Link>
+                </Link> */}
                 <Link to={`${url}/myOrder`}>
                   <ListGroup.Item className=" border-end-0 border-top-0 border-start-0">
                     <img src={cart} height="20" width="20" alt="" /> My Order
@@ -124,18 +124,18 @@ const Dashboard = () => {
         </div>
         <Col className="product-sub">
           {/* nested routes */}
-          
+
           <Switch>
             <Route exact path={path}>
               {/* <h3>Please select a topic.</h3> */}
               <div className="dashMargin">
-              <Shared />
+                <Shared />
                 <DashHome></DashHome>
-                </div>
+              </div>
             </Route>
             <AdminRoute path={`${path}/makeAdmin`}>
-            <div className="dashMargin">
-              <Admin />
+              <div className="dashMargin">
+                <Admin />
               </div>
             </AdminRoute>
             <AdminRoute path={`${path}/manageAllOrder`}>

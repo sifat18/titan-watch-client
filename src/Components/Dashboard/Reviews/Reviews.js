@@ -23,7 +23,7 @@ const Reviews = () => {
   return (
     // review data form
     <Container data-aos="zoom-in-up">
-      <h2 className="text-center">Give Us a review</h2>
+      <h2 className="text-center green">Give Us a review</h2>
       <form
         className="mt-3 mx-auto pt-2 w-50"
         onSubmit={handleSubmit(onSubmit)}
@@ -64,7 +64,7 @@ const Reviews = () => {
           className="reservation w-100"
           {...register("img")}
         />
-        <button className="adminAdd btncolr w-25 mx-auto mt-4 fs-3 ">
+        <button className="adminAdd bg-success  text-light w-25 mx-auto mt-4 fs-3 ">
           Add{" "}
         </button>
       </form>

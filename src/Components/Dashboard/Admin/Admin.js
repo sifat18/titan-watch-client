@@ -34,7 +34,10 @@ const Admin = () => {
   };
   return (
     <Container>
-      <h2 data-aos="fade-down-right" className="product-header fs-3 text-center">
+      <h2
+        data-aos="fade-down-right"
+        className="product-header fs-3 text-center green"
+      >
         Add An Admin
       </h2>
       <form
@@ -50,7 +53,9 @@ const Admin = () => {
           name="email"
           id="email"
         />
-        <button className="adminAdd btncolr px-5 mt-4 product-extra ">Add </button>
+        <button className="adminAdd bg-success text-light px-5 mt-4 product-extra ">
+          Add{" "}
+        </button>
       </form>
       {/* modal for showing confirmation */}
       <Modal show={show} onHide={handleClose}>

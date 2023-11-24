@@ -26,7 +26,7 @@ const AddProduct = () => {
   return (
     // product data form
     <Container data-aos="fade-down-left">
-      <h2 className="text-center">Add Watch</h2>
+      <h2 className="text-center green">Add Watch</h2>
       <form className="mt-3 pt-2" onSubmit={handleAddProduct}>
         <input
           required
@@ -121,7 +121,7 @@ const AddProduct = () => {
           name="star"
           id="star"
         />
-        <button className="adminAdd btncolr w-25 mx-auto mt-4 fs-3 ">
+        <button className="adminAdd text-light bg-success w-25 mx-auto mt-4 fs-3 ">
           Add{" "}
         </button>
       </form>
